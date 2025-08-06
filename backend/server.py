@@ -363,6 +363,8 @@ async def get_portfolio():
                 tech_stack["performance"] = tech["technologies"]  
             elif category == "backend":
                 tech_stack["backend"] = tech["technologies"]
+            elif category == "cloud":
+                tech_stack["cloud"] = tech["technologies"]
             elif category == "tools":
                 tech_stack["tools"] = tech["technologies"]
             elif category == "methodologies":
