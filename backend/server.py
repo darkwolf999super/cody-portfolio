@@ -246,42 +246,83 @@ async def init_portfolio_data():
     for project in mock_projects:
         await db.projects.insert_one(project)
     
-    # Insert tech stack categories
+    # Insert comprehensive tech stack categories
     tech_categories = [
         {
             "category": "frontend",
-            "technologies": ["React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3"],
+            "technologies": [
+                "React", "Next.js", "TypeScript", "JavaScript", "Vue.js", "Nuxt.js",
+                "HTML5", "CSS3", "Sass/SCSS", "Styled Components", "Emotion",
+                "Tailwind CSS", "PostCSS", "Webpack", "Vite", "Rollup", "Parcel",
+                "Redux", "Zustand", "React Query", "SWR", "Apollo Client",
+                "Framer Motion", "GSAP", "Three.js", "React Spring"
+            ],
             "icon": "⚡",
             "color": "bg-blue-900/30 border-blue-700/50",
             "order": 1
         },
         {
             "category": "performance",
-            "technologies": ["Canvas API", "D3.js", "Performance Profiling", "WebGL"],
+            "technologies": [
+                "Canvas API", "WebGL", "WebAssembly", "Service Workers", "Web Workers",
+                "Performance Profiling", "Lighthouse", "Core Web Vitals", "Bundle Analysis",
+                "Code Splitting", "Lazy Loading", "Image Optimization", "Caching Strategies",
+                "D3.js", "Chart.js", "Recharts", "WebRTC", "WebSockets"
+            ],
             "icon": "🎯", 
             "color": "bg-emerald-900/30 border-emerald-700/50",
             "order": 2
         },
         {
             "category": "backend",
-            "technologies": ["Node.js", "GraphQL", "PostgreSQL", "RESTful APIs"],
+            "technologies": [
+                "Node.js", "Express.js", "Fastify", "Koa", "NestJS",
+                "Python", "FastAPI", "Django", "Flask",
+                "GraphQL", "Apollo Server", "RESTful APIs", "tRPC",
+                "PostgreSQL", "MongoDB", "Redis", "Prisma", "TypeORM",
+                "MySQL", "SQLite", "Supabase", "Firebase", "PlanetScale"
+            ],
             "icon": "🗄️",
             "color": "bg-purple-900/30 border-purple-700/50", 
             "order": 3
         },
         {
-            "category": "tools",
-            "technologies": ["Figma APIs", "Git", "Docker", "CI/CD", "Jest"],
-            "icon": "🛠️",
-            "color": "bg-orange-900/30 border-orange-700/50",
+            "category": "cloud",
+            "technologies": [
+                "AWS", "Vercel", "Netlify", "Railway", "Heroku", "DigitalOcean",
+                "Google Cloud", "Azure", "Cloudflare", "CDN",
+                "Docker", "Kubernetes", "Serverless", "Lambda Functions",
+                "S3", "CloudFront", "RDS", "DynamoDB", "Terraform"
+            ],
+            "icon": "☁️",
+            "color": "bg-cyan-900/30 border-cyan-700/50",
             "order": 4
         },
         {
+            "category": "tools",
+            "technologies": [
+                "Git", "GitHub", "GitLab", "Bitbucket", "Linear", "Jira",
+                "Figma", "Adobe XD", "Sketch", "Figma APIs", "Figma Plugins",
+                "VSCode", "WebStorm", "Chrome DevTools", "Postman", "Insomnia",
+                "Jest", "Cypress", "Playwright", "Testing Library", "Storybook",
+                "ESLint", "Prettier", "Husky", "Lint-staged"
+            ],
+            "icon": "🛠️",
+            "color": "bg-orange-900/30 border-orange-700/50",
+            "order": 5
+        },
+        {
             "category": "methodologies",
-            "technologies": ["Component-driven Development", "Design Systems", "A11y", "Rapid Iteration"],
+            "technologies": [
+                "Component-driven Development", "Design Systems", "Atomic Design",
+                "Accessibility (a11y)", "Responsive Design", "Mobile-first Design",
+                "Progressive Enhancement", "Agile/Scrum", "Kanban", "TDD/BDD",
+                "Code Reviews", "Pair Programming", "CI/CD", "DevOps",
+                "Performance Optimization", "SEO", "Micro-frontends"
+            ],
             "icon": "📋",
             "color": "bg-gray-900/30 border-gray-700/50",
-            "order": 5
+            "order": 6
         }
     ]
     
