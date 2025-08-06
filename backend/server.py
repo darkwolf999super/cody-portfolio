@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -6,9 +6,10 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional, Dict, Any
 import uuid
 from datetime import datetime
+from bson import ObjectId
 
 
 ROOT_DIR = Path(__file__).parent
@@ -26,7 +27,70 @@ app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 
-# Define Models
+# Define Portfolio Models
+class PersonalInfo(BaseModel):
+    name: str
+    title: str
+    subtitle: str
+    tagline: str
+    phone: str
+    email: str
+    location: str
+    resumeUrl: str
+
+class AboutInfo(BaseModel):
+    summary: str
+    experience: str
+    expertise: str
+    mindset: str
+
+class LookingForInfo(BaseModel):
+    title: str
+    description: str
+
+class PortfolioConfig(BaseModel):
+    personal: PersonalInfo
+    about: AboutInfo
+    lookingFor: LookingForInfo
+    updatedAt: datetime = Field(default_factory=datetime.utcnow)
+
+class Experience(BaseModel):
+    id: Optional[str] = None
+    company: str
+    position: str
+    duration: str
+    description: str
+    achievements: List[str]
+    order: int = 0
+    createdAt: datetime = Field(default_factory=datetime.utcnow)
+
+class Project(BaseModel):
+    id: Optional[str] = None
+    title: str
+    description: str
+    impact: str
+    tech: List[str]
+    order: int = 0
+    featured: bool = False
+    createdAt: datetime = Field(default_factory=datetime.utcnow)
+
+class TechStack(BaseModel):
+    id: Optional[str] = None
+    category: str
+    technologies: List[str]
+    icon: str
+    color: str
+    order: int = 0
+
+class PortfolioData(BaseModel):
+    personal: PersonalInfo
+    about: AboutInfo
+    experience: List[Experience]
+    projects: List[Project]
+    techStack: Dict[str, List[str]]  # For frontend compatibility
+    lookingFor: LookingForInfo
+
+# Legacy models for backward compatibility
 class StatusCheck(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -34,23 +98,6 @@ class StatusCheck(BaseModel):
 
 class StatusCheckCreate(BaseModel):
     client_name: str
-
-# Add your routes to the router instead of directly to app
-@api_router.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.dict()
-    status_obj = StatusCheck(**status_dict)
-    _ = await db.status_checks.insert_one(status_obj.dict())
-    return status_obj
-
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    status_checks = await db.status_checks.find().to_list(1000)
-    return [StatusCheck(**status_check) for status_check in status_checks]
 
 # Include the router in the main app
 app.include_router(api_router)
