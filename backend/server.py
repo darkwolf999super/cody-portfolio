@@ -122,7 +122,7 @@ async def init_portfolio_data():
         "phone": "+1 (206) 238 7108",
         "email": "dwebb001993@gmail.com",
         "location": "Spokane Valley, WA",
-        "resumeUrl": "#"
+        "resumeUrl": "https://drive.google.com/file/d/1_nyRnG9mOrOqC0uFUFxGNlX2LWEnFitz/view?usp=sharing"
     }
     
     mock_about = {
