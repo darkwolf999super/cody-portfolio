@@ -113,6 +113,76 @@ export const mockPortfolioData = {
       order: 5,
       featured: false,
       createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "6",
+      title: "Real Estate Investment Platform",
+      description: "Built comprehensive property management dashboard for real estate investment firm",
+      impact: "Streamlined operations for 500+ properties across 3 states",
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Mapbox API", "Stripe"],
+      order: 6,
+      featured: true,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "7",
+      title: "AI-Powered Healthcare Analytics",
+      description: "Developed predictive analytics dashboard for healthcare provider network",
+      impact: "Improved patient outcomes by 25% through early intervention alerts",
+      tech: ["React", "Python", "TensorFlow", "D3.js", "AWS Lambda"],
+      order: 7,
+      featured: true,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "8",
+      title: "Insurance Claims Processing System",
+      description: "Modernized legacy claims processing with real-time document analysis",
+      impact: "Reduced processing time by 60% and improved accuracy by 40%",
+      tech: ["Vue.js", "Node.js", "OpenAI API", "AWS S3", "Redis"],
+      order: 8,
+      featured: false,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "9",
+      title: "Mortgage Application Portal",
+      description: "Built end-to-end mortgage application system with automated underwriting",
+      impact: "Processed $50M+ in mortgage applications with 99.9% uptime",
+      tech: ["React", "TypeScript", "GraphQL", "PostgreSQL", "AWS"],
+      order: 9,
+      featured: false,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "10",
+      title: "Retail Inventory Management",
+      description: "Created real-time inventory tracking system for national retail chain",
+      impact: "Optimized stock levels across 200+ locations, reducing waste by 30%",
+      tech: ["Next.js", "WebSockets", "Redis", "PostgreSQL", "Docker"],
+      order: 10,
+      featured: false,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "11",
+      title: "Fintech Compliance Dashboard",
+      description: "Developed regulatory compliance monitoring system for fintech startup",
+      impact: "Ensured 100% compliance across 15+ regulatory requirements",
+      tech: ["React", "TypeScript", "Python", "MongoDB", "AWS"],
+      order: 11,
+      featured: false,
+      createdAt: "2024-01-01T00:00:00.000Z"
+    },
+    {
+      id: "12",
+      title: "Supply Chain Optimization Platform",
+      description: "Built logistics optimization system for manufacturing company",
+      impact: "Reduced shipping costs by 35% and improved delivery times by 50%",
+      tech: ["Vue.js", "Node.js", "GraphQL", "PostgreSQL", "Google Maps API"],
+      order: 12,
+      featured: false,
+      createdAt: "2024-01-01T00:00:00.000Z"
     }
   ],
   techStack: {
