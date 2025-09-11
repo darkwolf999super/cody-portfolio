@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Globe } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const Hero = ({ data }) => {
@@ -28,18 +28,52 @@ const Hero = ({ data }) => {
             {data.tagline}
           </p>
 
+          {/* Social Links */}
+          <div className="flex justify-center space-x-6 pt-4">
+            {data.github && (
+              <a
+                href={data.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110"
+              >
+                <Github className="h-6 w-6" />
+              </a>
+            )}
+            {data.linkedin && (
+              <a
+                href={data.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110"
+              >
+                <Linkedin className="h-6 w-6" />
+              </a>
+            )}
+            {data.portfolio && (
+              <a
+                href={data.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110"
+              >
+                <Globe className="h-6 w-6" />
+              </a>
+            )}
+          </div>
+
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Button
               onClick={scrollToAbout}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105 font-mono"
             >
               View My Work
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             <Button
               variant="outline"
-              className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3 text-lg transition-all duration-300"
+              className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3 text-lg transition-all duration-300 font-mono"
               onClick={() => window.open(data.resumeUrl, '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />

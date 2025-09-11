@@ -1,11 +1,12 @@
 import React from 'react';
-import { Code2, Zap, Users } from 'lucide-react';
+import { User, Code, Zap, Target, TrendingUp } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
+import { Badge } from '../ui/badge';
 
 const About = ({ data }) => {
   const highlights = [
     {
-      icon: <Code2 className="h-6 w-6" />,
+      icon: <Code className="h-6 w-6" />,
       title: "Technical Excellence",
       description: data.expertise
     },
@@ -15,7 +16,7 @@ const About = ({ data }) => {
       description: data.experience
     },
     {
-      icon: <Users className="h-6 w-6" />,
+      icon: <Target className="h-6 w-6" />,
       title: "Product Mindset",
       description: data.mindset
     }
@@ -31,41 +32,55 @@ const About = ({ data }) => {
           <div className="w-20 h-1 bg-emerald-400 mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Main Description */}
-          <div className="space-y-6">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              {data.summary}
-            </p>
-            <p className="text-base text-gray-400 leading-relaxed">
-              Through my experience spans well-known companies, I joined during fast-moving, 
-              high-ambiguity phases—now seeking a startup environment to own core product UI 
-              and drive product momentum.
-            </p>
-          </div>
+        {/* Main Summary */}
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <p className="text-lg text-gray-300 leading-relaxed">
+            {data.summary}
+          </p>
+        </div>
 
-          {/* Highlights Cards */}
-          <div className="space-y-4">
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800 hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="text-emerald-400 mt-1">
-                      {highlight.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-mono font-semibold text-gray-100 mb-2">
-                        {highlight.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">
-                        {highlight.description}
-                      </p>
-                    </div>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Background Details */}
+          <Card className="lg:col-span-2 bg-gray-900/60 border-gray-800 hover:border-gray-700 transition-all duration-300">
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <User className="h-6 w-6 text-emerald-400 mr-3" />
+                <h3 className="text-xl font-mono font-bold text-gray-100">Background</h3>
+              </div>
+              
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-emerald-400 font-semibold mb-2">Journey</h4>
+                  <p className="text-gray-300">{data.experience}</p>
+                </div>
+                <div>
+                  <h4 className="text-emerald-400 font-semibold mb-2">Core Skills</h4>
+                  <p className="text-gray-300">{data.expertise}</p>
+                </div>
+                <div>
+                  <h4 className="text-emerald-400 font-semibold mb-2">Philosophy</h4>
+                  <p className="text-gray-300 font-mono text-sm italic">{data.mindset}</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Key Metrics */}
+          <Card className="bg-gray-900/60 border-gray-800 hover:border-emerald-400/30 transition-all duration-300">
+            <CardContent className="p-6">
+              <div className="flex items-center mb-4">
+                <TrendingUp className="h-6 w-6 text-emerald-400 mr-3" />
+                <h3 className="text-xl font-mono font-bold text-gray-100">Impact</h3>
+              </div>
+              <div className="space-y-3">
+                {data.metrics.map((metric, index) => (
+                  <div key={index} className="p-3 bg-gray-800/50 rounded-lg border border-gray-700">
+                    <p className="text-sm text-gray-300 font-mono">{metric}</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
