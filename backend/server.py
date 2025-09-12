@@ -116,7 +116,7 @@ async def init_portfolio_data():
     # Initialize with mock data
     mock_personal = {
         "name": "Dwayne Webb",
-        "title": "Senior Frontend Engineer",
+        "title": "Senior Software Engineer",
         "subtitle": "Product Builder",
         "tagline": "I ship fast, scale smart, and build beautiful UI that performs.",
         "phone": "+1 (206) 238 7108",
@@ -149,7 +149,7 @@ async def init_portfolio_data():
     mock_experiences = [
         {
             "company": "Work & Co (Accenture)",
-            "position": "Senior Frontend Engineer", 
+            "position": "Senior Software Engineer", 
             "duration": "04/2022 - Present",
             "description": "Oversaw frontend architecture and delivery for multiple early-stage startup clients in wellness, retail, and fintech—translating design prototypes into performant, production-ready web apps using Next.js.",
             "achievements": [

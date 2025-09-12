@@ -9,25 +9,27 @@ export const mockPortfolioData = {
     email: "dwayne1992x@gmail.com",
     location: "Spokane Valley, WA",
     resumeUrl: "https://drive.google.com/file/d/15Sr_a1NgZnh8KCgxqhzBW2PRpVh5jYMs/view?usp=drive_link",
-    github: "*",
-    linkedin: "*",
-    portfolio: "*"
+    calendlyUrl: "https://calendly.com/dwayne1992x/30min",
+    github: "#", // "*",
+    linkedin: "#", // "*",
+    portfolio: "#" // "*"
   },
 
   about: {
     summary:
-      "Senior Software Engineer with 10+ years building production systems across logistics, fintech, and developer tooling. Expert in React/Node.js ecosystems with proven track record of shipping high-impact features that directly improve business metrics.",
+      "Senior Software Engineer with 10+ years building production systems across logistics, fintech, and developer tooling. Expert in React/Node.js ecosystems with proven track record of shipping high-impact features that directly improve business metrics. Recent passion for GenAI development acceleration using Cursor, Windsurf, and Claude Code.",
     experience:
-      "10+ years • Product consultancies → High-growth startups → Enterprise platforms",
+      "10+ years • Product consultancies → High-growth startups → Enterprise platforms • Recent GenAI-powered development focus",
     expertise:
-      "React/Next.js • Node.js/Python • Real-time systems • Performance optimization • Team leadership",
+      "React/Next.js • Node.js/Python • Real-time systems • Performance optimization • Team leadership • AI-assisted development with Cursor/Windsurf/Claude",
     mindset:
-      "Ship fast, measure impact, iterate. Quality code is business value.",
+      "Ship fast with AI assistance, measure impact, iterate. Quality code is business value, GenAI accelerates delivery.",
     metrics: [
       "40% MTTR reduction through DevEx improvements",
-      "18% cost savings via optimization algorithms",
+      "18% cost savings via optimization algorithms", 
       "8s → 200ms latency improvements",
-      "~10K LOC shipped in 48h with full test coverage"
+      "~10K LOC shipped in 48h with Windsurf AI assistance and full test coverage",
+      "5x development speed increase using Cursor and Claude Code for rapid prototyping"
     ]
   },
 
@@ -84,85 +86,118 @@ export const mockPortfolioData = {
   projects: [
     {
       id: "1",
-      title: "Real-Time Shipment Tracking",
+      title: "Shipwell",
       description:
-        "Enterprise-grade real-time tracking system processing 10K+ shipments daily. Built pub/sub architecture with Redis and WebSockets for sub-200ms updates.",
-      impact: "8s → 200ms latency • 95% uptime • Processing 10K+ shipments/day",
-      tech: ["Python", "Redis", "WebSockets", "React", "PostgreSQL"],
-      demoUrl: "https://shipwell.com/visibility",
-      githubUrl: "https://github.com/dwayne-webb/realtime-tracking-demo",
-      screenshot: "/images/projects/realtime-tracking.png",
+        "Enterprise TMS platform for freight logistics and supply chain optimization. Built real-time tracking, optimization algorithms, and reliability improvements serving Fortune 500 customers.",
+      impact: "8s → 200ms latency • 18% cost reduction • 40% MTTR reduction",
+      tech: ["React", "Python", "Node.js", "Redis", "WebSockets", "Kafka"],
+      productUrl: "https://www.shipwell.com/",
+      screenshot: "/images/projects/shipwell.png",
       order: 1,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "2",
-      title: "Fulfillment Optimization Engine",
+      title: "Mendelgen",
       description:
-        "ML-powered routing optimization processing 5K+ orders daily. Event-driven architecture with Kafka ensuring 99.9% delivery reliability.",
-      impact: "18% cost reduction • $2M+ annual savings • 99.9% delivery success",
-      tech: ["Node.js", "Kafka", "PostgreSQL", "Python", "scikit-learn"],
-      demoUrl: "https://shipwell.com/optimization",
-      githubUrl: "https://github.com/dwayne-webb/fulfillment-optimizer",
-      screenshot: "/images/projects/optimization-engine.png",
+        "AI-powered genetic analysis and research platform providing advanced genomic insights and personalized medicine solutions for healthcare providers.",
+      impact: "Accelerating genetic research • Personalized medicine • Healthcare innovation",
+      tech: ["React", "Python", "AI/ML", "Bioinformatics", "Next.js"],
+      productUrl: "https://mendelgen.com/",
+      screenshot: "/images/projects/mendelgen.png",
       order: 2,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "3",
-      title: "AI-Powered Exceptions Dashboard",
+      title: "Order Protection",
       description:
-        "Intelligent exception handling system with auto-summarization. Built in 48h using AI-assisted development while maintaining 95% test coverage.",
-      impact:
-        "Unblocked $500K customer launch • 10K LOC in 48h • 95% test coverage",
-      tech: ["React", "TypeScript", "Playwright", "OpenAI API", "Node.js"],
-      demoUrl: "https://shipwell.com/exceptions",
-      githubUrl: "https://github.com/dwayne-webb/ai-exceptions-dashboard",
-      screenshot: "/images/projects/exceptions-dashboard.png",
+        "E-commerce order protection and warranty platform providing comprehensive coverage for online purchases, protecting both merchants and customers.",
+      impact: "Merchant protection • Customer satisfaction • Risk mitigation",
+      tech: ["React", "Node.js", "Payment APIs", "Insurance APIs", "TypeScript"],
+      productUrl: "https://orderprotection.com/",
+      screenshot: "/images/projects/orderprotection.png",
       order: 3,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "4",
-      title: "DevEx & Reliability Platform",
+      title: "Property Management",
       description:
-        "Comprehensive developer experience platform with automated alerting, deployment pipelines, and testing infrastructure serving 15+ engineers.",
-      impact: "40% MTTR reduction • 2x deployment frequency • 99.5% uptime",
-      tech: ["AWS", "Docker", "Terraform", "Playwright", "Grafana"],
-      githubUrl: "https://github.com/dwayne-webb/devex-platform",
-      screenshot: "/images/projects/devex-platform.png",
+        "AI-powered property management system with automated tenant screening, maintenance scheduling, and financial reporting for real estate professionals.",
+      impact: "Automated workflows • Tenant satisfaction • Operational efficiency",
+      tech: ["React", "AI/ML", "Python", "Database Management", "APIs"],
+      productUrl: "https://portal.foxyai.com/",
+      screenshot: "/images/projects/foxyai.png",
       order: 4,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "5",
-      title: "Enterprise Component System",
+      title: "Pickleball Platform",
       description:
-        "Scalable design system powering 8+ production applications. Built with Next.js, TypeScript, and comprehensive Storybook documentation.",
-      impact: "50% faster feature delivery • 8+ apps using system • 200+ components",
-      tech: ["Next.js", "TypeScript", "Storybook", "TailwindCSS", "Radix UI"],
-      demoUrl: "https://components.workandco.com",
-      githubUrl: "https://github.com/dwayne-webb/enterprise-components",
-      screenshot: "/images/projects/component-system.png",
+        "Comprehensive pickleball community platform with court booking, player matching, tournament management, and skill tracking for enthusiasts.",
+      impact: "Community building • Court utilization • Player engagement",
+      tech: ["React", "Node.js", "Geolocation", "Real-time Chat", "Payment"],
+      productUrl: "https://pickleball.com/",
+      screenshot: "/images/projects/pickleball.png",
       order: 5,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "6",
-      title: "Jira Analytics Suite",
+      title: "Hospitality Platform",
       description:
-        "Advanced reporting plugins for Jira Cloud with interactive D3.js visualizations. Deployed to 500+ Atlassian Marketplace customers.",
-      impact: "500+ customers • 4.5/5 marketplace rating • $50K+ MRR",
-      tech: ["React", "D3.js", "Atlassian Connect", "Node.js", "MongoDB"],
-      demoUrl: "https://marketplace.atlassian.com/apps/jira-advanced-reports",
-      githubUrl: "https://github.com/dwayne-webb/jira-analytics-suite",
-      screenshot: "/images/projects/jira-analytics.png",
+        "Advanced online ordering and experience builder for restaurants and hospitality businesses, featuring customizable ordering flows and customer engagement tools.",
+      impact: "Order conversion • Customer experience • Revenue optimization",
+      tech: ["React", "Order Management", "Payment Processing", "Analytics"],
+      productUrl: "https://www.paytronix.com/",
+      screenshot: "/images/projects/devex-platform.png",
       order: 6,
+      featured: true,
+      createdAt: "2025-01-01T00:00:00.000Z"
+    },
+    {
+      id: "7",
+      title: "Insurance Platform",
+      description:
+        "Modern insurance quoting platform with Survey.js integration, Canopy Connect APIs, and Microsoft Dynamics integration for streamlined policy management.",
+      impact: "Quote accuracy • Process automation • Agent productivity",
+      tech: ["React", "Survey.js", "Canopy Connect", "Microsoft Dynamics"],
+      productUrl: "https://www.brightway.com/",
+      screenshot: "/images/projects/brightway.png",
+      order: 7,
+      featured: true,
+      createdAt: "2025-01-01T00:00:00.000Z"
+    },
+    {
+      id: "8",
+      title: "Healthcare CDI Audit",
+      description:
+        "Clinical Documentation Improvement platform using AI to analyze medical records and provide retrospective insights for healthcare quality and compliance.",
+      impact: "Documentation quality • Compliance accuracy • Clinical insights",
+      tech: ["React", "AI/ML", "Healthcare APIs", "Data Analysis", "Python"],
+      productUrl: "https://www.iodinesoftware.com/",
+      screenshot: "/images/projects/optimization-engine.png",
+      order: 8,
+      featured: true,
+      createdAt: "2025-01-01T00:00:00.000Z"
+    },
+    {
+      id: "9",
+      title: "JIRA Analytics",
+      description:
+        "Advanced project dashboard and analytics suite for JIRA with comprehensive reporting, velocity tracking, and team performance insights.",
+      impact: "Team productivity • Project visibility • Data-driven decisions",
+      tech: ["React", "D3.js", "Atlassian APIs", "Analytics", "Dashboard"],
+      productUrl: "https://www.tempo.io/products/project-dashboards-for-jira",
+      screenshot: "/images/projects/jira-analytics.png",
+      order: 9,
       featured: false,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
@@ -184,6 +219,18 @@ export const mockPortfolioData = {
       "Three.js",
       "WCAG",
       "Storybook"
+    ],
+    performance: [
+      "Cursor AI",
+      "Windsurf",
+      "Claude Code",
+      "GitHub Copilot",
+      "V0 by Vercel",
+      "AI-assisted debugging",
+      "Rapid prototyping",
+      "Code generation",
+      "Performance profiling",
+      "Bundle optimization"
     ],
     backend: [
       "Node.js",
@@ -213,6 +260,9 @@ export const mockPortfolioData = {
       "CI/CD"
     ],
     tools: [
+      "Cursor IDE",
+      "Windsurf IDE", 
+      "Claude Code",
       "Git",
       "GitHub",
       "Bitbucket",
@@ -229,16 +279,18 @@ export const mockPortfolioData = {
       "Prettier"
     ],
     methodologies: [
+      "AI-Accelerated Development",
       "Component-driven Development",
       "Design Systems",
       "Accessibility (WCAG)",
       "Agile/Scrum",
       "TDD/BDD",
       "Code Reviews",
-      "Pair Programming",
+      "AI-Assisted Pair Programming",
       "Performance Optimization",
       "CI/CD",
-      "DevEx/Reliability"
+      "DevEx/Reliability",
+      "Rapid Prototyping with GenAI"
     ]
   },
 

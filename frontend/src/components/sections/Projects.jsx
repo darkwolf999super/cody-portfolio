@@ -17,7 +17,11 @@ const Projects = ({ data }) => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {data.filter(project => project.featured).map((project) => (
-            <Card key={project.id} className="bg-gray-900/60 border-gray-800 hover:border-emerald-400/50 transition-all duration-300 group">
+            <Card 
+              key={project.id} 
+              className="bg-gray-900/60 border-gray-800 hover:border-emerald-400/50 transition-all duration-300 group cursor-pointer"
+              onClick={() => window.open(project.productUrl, '_blank')}
+            >
               {/* Project Image Placeholder */}
               <div className="h-48 bg-gray-800/50 border-b border-gray-700 relative overflow-hidden">
                 {project.screenshot ? (
@@ -33,28 +37,6 @@ const Projects = ({ data }) => {
                 ) : null}
                 <div className="w-full h-full flex items-center justify-center text-gray-500" style={project.screenshot ? {display: 'none'} : {}}>
                   <ImageIcon className="h-12 w-12" />
-                </div>
-                <div className="absolute top-3 right-3 flex gap-2">
-                  {project.demoUrl && (
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="bg-gray-900/80 hover:bg-emerald-600 text-white border-gray-700"
-                      onClick={() => window.open(project.demoUrl, '_blank')}
-                    >
-                      <Eye className="h-4 w-4" />
-                    </Button>
-                  )}
-                  {project.githubUrl && (
-                    <Button
-                      size="sm"
-                      variant="secondary"
-                      className="bg-gray-900/80 hover:bg-emerald-600 text-white border-gray-700"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                    >
-                      <Github className="h-4 w-4" />
-                    </Button>
-                  )}
                 </div>
               </div>
 
@@ -87,29 +69,6 @@ const Projects = ({ data }) => {
                   ))}
                 </div>
 
-                <div className="flex gap-2 pt-2">
-                  {project.demoUrl && (
-                    <Button
-                      size="sm"
-                      className="bg-emerald-600 hover:bg-emerald-700 text-white flex-1"
-                      onClick={() => window.open(project.demoUrl, '_blank')}
-                    >
-                      <Eye className="h-4 w-4 mr-2" />
-                      View Demo
-                    </Button>
-                  )}
-                  {project.githubUrl && (
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-800 flex-1"
-                      onClick={() => window.open(project.githubUrl, '_blank')}
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </Button>
-                  )}
-                </div>
               </CardContent>
             </Card>
           ))}
@@ -122,29 +81,18 @@ const Projects = ({ data }) => {
           </h3>
           <div className="grid md:grid-cols-3 gap-4">
             {data.filter(project => !project.featured).map((project) => (
-              <Card key={project.id} className="bg-gray-900/40 border-gray-800 hover:border-gray-700 transition-all duration-300 group">
+              <Card 
+                key={project.id} 
+                className="bg-gray-900/40 border-gray-800 hover:border-gray-700 transition-all duration-300 group cursor-pointer"
+                onClick={() => window.open(project.productUrl, '_blank')}
+              >
                 <CardContent className="p-4 space-y-3">
                   <div className="flex items-start justify-between">
                     <h4 className="text-lg font-mono font-bold text-gray-100 group-hover:text-emerald-400 transition-colors">
                       {project.title}
                     </h4>
                     <div className="flex gap-1">
-                      {project.demoUrl && (
-                        <button
-                          onClick={() => window.open(project.demoUrl, '_blank')}
-                          className="text-gray-500 hover:text-emerald-400 transition-colors"
-                        >
-                          <Eye className="h-4 w-4" />
-                        </button>
-                      )}
-                      {project.githubUrl && (
-                        <button
-                          onClick={() => window.open(project.githubUrl, '_blank')}
-                          className="text-gray-500 hover:text-emerald-400 transition-colors"
-                        >
-                          <Github className="h-4 w-4" />
-                        </button>
-                      )}
+                      <ExternalLink className="h-4 w-4 text-gray-500 group-hover:text-emerald-400 transition-colors" />
                     </div>
                   </div>
                   

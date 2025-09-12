@@ -28,7 +28,8 @@ const Hero = ({ data }) => {
             {data.tagline}
           </p>
 
-          {/* Social Links */}
+          {/* Social Links - Commented out temporarily */}
+          {/* 
           <div className="flex justify-center space-x-6 pt-4">
             {data.github && (
               <a
@@ -61,6 +62,7 @@ const Hero = ({ data }) => {
               </a>
             )}
           </div>
+          */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">

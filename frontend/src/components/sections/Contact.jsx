@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Download, Copy, Check, Github, Linkedin, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Download, Copy, Check, Github, Linkedin, Globe, Calendar } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 
@@ -137,13 +137,23 @@ const Contact = ({ data }) => {
             )}
           </div>
           
-          <Button
-            onClick={() => window.open(data.resumeUrl, '_blank')}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105 font-mono"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Download Full Resume
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button
+              onClick={() => window.open(data.calendlyUrl, '_blank')}
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg transition-all duration-300 transform hover:scale-105 font-mono"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              Schedule a Call
+            </Button>
+            <Button
+              onClick={() => window.open(data.resumeUrl, '_blank')}
+              variant="outline"
+              className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-3 text-lg transition-all duration-300 font-mono"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
+            </Button>
+          </div>
         </div>
 
         {/* Footer */}
