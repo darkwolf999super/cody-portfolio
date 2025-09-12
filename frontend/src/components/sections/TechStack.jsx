@@ -2,13 +2,13 @@ import React from 'react';
 import { Badge } from '../ui/badge';
 import { Card, CardContent, CardHeader } from '../ui/card';
 
-const TechStack = ({ data }) => {
+const TechStack = ({ data = {} }) => {
   const categories = [
-    { title: 'Frontend', icon: '⚡', techs: data.frontend, color: 'bg-blue-900/30 border-blue-700/50' },
-    { title: 'Performance & Graphics', icon: '🎯', techs: data.performance, color: 'bg-emerald-900/30 border-emerald-700/50' },
-    { title: 'Backend & Data', icon: '🗄️', techs: data.backend, color: 'bg-purple-900/30 border-purple-700/50' },
-    { title: 'Tools & Platforms', icon: '🛠️', techs: data.tools, color: 'bg-orange-900/30 border-orange-700/50' },
-    { title: 'Methodology', icon: '📋', techs: data.methodologies, color: 'bg-gray-900/30 border-gray-700/50' }
+    { title: 'Frontend', icon: '⚡', techs: data.frontend || [], color: 'bg-blue-900/30 border-blue-700/50' },
+    { title: 'Performance & Graphics', icon: '🎯', techs: data.performance || [], color: 'bg-emerald-900/30 border-emerald-700/50' },
+    { title: 'Backend & Data', icon: '🗄️', techs: data.backend || [], color: 'bg-purple-900/30 border-purple-700/50' },
+    { title: 'Tools & Platforms', icon: '🛠️', techs: data.tools || [], color: 'bg-orange-900/30 border-orange-700/50' },
+    { title: 'Methodology', icon: '📋', techs: data.methodologies || [], color: 'bg-gray-900/30 border-gray-700/50' }
   ];
 
   return (
