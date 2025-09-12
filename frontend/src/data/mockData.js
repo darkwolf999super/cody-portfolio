@@ -10,8 +10,7 @@ export const mockPortfolioData = {
     location: "Spokane Valley, WA",
     resumeUrl: "https://drive.google.com/file/d/15Sr_a1NgZnh8KCgxqhzBW2PRpVh5jYMs/view?usp=drive_link",
     calendlyUrl: "https://calendly.com/dwayne1992x/30min",
-    github: "#", // "*",
-    linkedin: "#", // "*",
+    github: "https://github.com/dwayneex",
     portfolio: "#" // "*"
   },
 

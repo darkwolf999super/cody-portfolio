@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Download, Copy, Check, Github, Linkedin, Globe, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, Download, Copy, Check, Github, Globe, Calendar } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 
@@ -107,19 +107,6 @@ const Contact = ({ data }) => {
                   <Github className="h-6 w-6 text-gray-300 group-hover:text-white" />
                 </div>
                 <span className="text-sm text-gray-400 mt-2 group-hover:text-emerald-400 transition-colors">GitHub</span>
-              </a>
-            )}
-            {data.linkedin && (
-              <a
-                href={data.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center group"
-              >
-                <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
-                  <Linkedin className="h-6 w-6 text-gray-300 group-hover:text-white" />
-                </div>
-                <span className="text-sm text-gray-400 mt-2 group-hover:text-emerald-400 transition-colors">LinkedIn</span>
               </a>
             )}
             {data.portfolio && (

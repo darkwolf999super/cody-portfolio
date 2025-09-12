@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Download, Github, Linkedin, Globe } from 'lucide-react';
+import { ArrowDown, Download, Github, Globe } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const Hero = ({ data }) => {
@@ -39,16 +39,6 @@ const Hero = ({ data }) => {
                 className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110"
               >
                 <Github className="h-6 w-6" />
-              </a>
-            )}
-            {data.linkedin && (
-              <a
-                href={data.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-emerald-400 transition-colors duration-300 transform hover:scale-110"
-              >
-                <Linkedin className="h-6 w-6" />
               </a>
             )}
             {data.portfolio && (
