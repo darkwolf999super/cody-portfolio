@@ -74,53 +74,6 @@ const Projects = ({ data }) => {
           ))}
         </div>
 
-        {/* Show non-featured projects in a compact grid */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-mono font-bold text-gray-100 mb-6 text-center">
-            Additional Projects
-          </h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            {data.filter(project => !project.featured).map((project) => (
-              <Card 
-                key={project.id} 
-                className="bg-gray-900/40 border-gray-800 hover:border-gray-700 transition-all duration-300 group cursor-pointer"
-                onClick={() => window.open(project.productUrl, '_blank')}
-              >
-                <CardContent className="p-4 space-y-3">
-                  <div className="flex items-start justify-between">
-                    <h4 className="text-lg font-mono font-bold text-gray-100 group-hover:text-emerald-400 transition-colors">
-                      {project.title}
-                    </h4>
-                    <div className="flex gap-1">
-                      <ExternalLink className="h-4 w-4 text-gray-500 group-hover:text-emerald-400 transition-colors" />
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="text-emerald-400 text-xs font-mono">
-                    {project.impact}
-                  </div>
-
-                  <div className="flex flex-wrap gap-1">
-                    {project.tech.slice(0, 3).map((tech, index) => (
-                      <Badge key={index} variant="secondary" className="bg-gray-800/50 text-gray-400 text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <Badge variant="secondary" className="bg-gray-800/50 text-gray-400 text-xs">
-                        +{project.tech.length - 3}
-                      </Badge>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

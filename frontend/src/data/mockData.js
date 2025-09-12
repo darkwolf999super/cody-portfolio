@@ -198,7 +198,7 @@ export const mockPortfolioData = {
       productUrl: "https://www.tempo.io/products/project-dashboards-for-jira",
       screenshot: "/images/projects/jira-analytics.png",
       order: 9,
-      featured: false,
+      featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
   ],
