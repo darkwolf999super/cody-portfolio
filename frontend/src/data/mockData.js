@@ -7,9 +7,10 @@ export const mockPortfolioData = {
       "I've built things that matter — from secure logins to real-time dashboards and ML integrations. Full-stack engineer focused on scalable, data-driven solutions.",
     email: "codyrist0383@gmail.com",
     location: "Seattle, WA, 98103",
-    resumeUrl: "https://codyrist.vercel.app",
-    linkedin: "https://www.linkedin.com/in/cody-christ-6a2708384/",
-    portfolio: "https://codyrist.vercel.app"
+    resumeUrl: "https://drive.google.com/file/d/1LN8G4KOnH0fBskDAqWW50V-7XvQCm9Fa/view?usp=sharing",
+    linkedin: "https://www.linkedin.com/in/cody-christ-6a2708383/",
+    portfolio: "https://codyrist.vercel.app/",
+    github: "https://github.com/codyrist"
   },
 
   about: {
@@ -88,12 +89,10 @@ export const mockPortfolioData = {
     {
       id: "1",
       title: "Databricks Analytics Platform",
-      description:
-        "High-performance data analytics platform with real-time interactive dashboards and AI model integration. Built scalable backend APIs optimizing data pipelines for enhanced user engagement.",
+      description: "Enterprise data analytics platform delivering real-time insights through AI-powered dashboards. Architected scalable backend APIs optimizing data pipelines for enhanced user engagement and built comprehensive ML model deployment infrastructure. Integrated advanced visualization components with streaming data processing capabilities, enabling business intelligence teams to make data-driven decisions with 40% faster insight generation. Implemented robust authentication systems and role-based access controls for enterprise-grade security.",
       impact: "40% improvement in user insights • 35% deployment time reduction • ML model production deployment",
       tech: ["React", "Node.js", "Python", "Go", "GraphQL", "AI/ML", "AWS CDK", "Docker"],
-      productUrl: "https://databricks.com/",
-      screenshot: "https://databricks.com/wp-content/uploads/2023/05/databricks-ai-bi-dashboards.png",
+      url: "https://databricks.com/product/data-intelligence-platform",
       order: 1,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -101,12 +100,10 @@ export const mockPortfolioData = {
     {
       id: "2", 
       title: "H2O.ai ML Platform",
-      description:
-        "Real-time AI-powered data visualization platform with 30+ reusable components. Features drag-and-drop dashboard elements, real-time data streaming, and declarative UI DSL for dynamic ML workflows.",
+      description: "Interactive ML visualization framework featuring 30+ drag-and-drop components for rapid dashboard creation. Built comprehensive real-time streaming infrastructure using declarative Python DSL, enabling data scientists to create dynamic ML workflows without frontend expertise. Developed custom visualization widgets with Plotly.js integration, supporting real-time model monitoring, A/B testing interfaces, and collaborative analytics environments. Implemented WebSocket-based live data streaming with server-sent events for seamless user experience and sub-second latency updates.",
       impact: "30+ reusable components • Real-time ML insights • Improved dashboard interactivity",
       tech: ["React", "Plotly.js", "Python", "Flask", "GraphQL", "WebSocket", "SSE", "Docker"],
-      productUrl: "https://h2o.ai/",
-      screenshot: "https://h2o.ai/content/dam/h2oai/en/marketing/images/logo/H2O-wave-screenshot.png",
+      url: "https://wave.h2o.ai/",
       order: 2,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -114,129 +111,112 @@ export const mockPortfolioData = {
     {
       id: "3",
       title: "Auth0 Identity Platform",
-      description:
-        "Secure authentication and identity management platform with OAuth2.0, OpenID Connect, and MFA implementation. Built real-time user analytics dashboard and scalable backend services.",
+      description: "Enterprise identity management system implementing OAuth2.0, OpenID Connect, and multi-factor authentication protocols. Developed comprehensive real-time user analytics dashboard with advanced security monitoring and threat detection capabilities. Built high-performance authentication APIs handling millions of requests with Redis-based session management and distributed caching. Integrated Apache ECharts for interactive security metrics visualization, user behavior analytics, and compliance reporting. Implemented adaptive authentication flows with risk-based access controls and anomaly detection algorithms.",
       impact: "Enterprise authentication • 35% API latency reduction • Real-time user analytics",
       tech: ["React", "Node.js", "Express.js", "Apache Echarts", "Redis", "OAuth2.0", "OpenID Connect"],
-      productUrl: "https://auth0.com/",
-      screenshot: "https://cdn.auth0.com/website/auth0-dashboard-screenshot.png",
+      url: "https://auth0.com/platform",
       order: 3,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "4",
-      title: "Real-time Dashboard Suite",
-      description:
-        "Collection of real-time interactive dashboards built across multiple platforms, featuring live data streaming, AI/ML integration, and advanced data visualization components.",
-      impact: "Real-time insights • Interactive data exploration • Scalable visualization",
-      tech: ["React", "D3.js", "WebSockets", "Python", "GraphQL", "Redis", "Kafka"],
-      screenshot: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
+      title: "TreeGPT - Branching Conversations",
+      description: "Revolutionary AI chat platform supporting conversation branching with multiple language models (GPT-4, Claude, Gemini). Built comprehensive conversation management system with D3.js visualization for exploring conversation trees and decision paths. Implemented secure authentication flows, real-time chat interface with WebSocket connections, and advanced sharing/export/import functionality for collaborative AI workflows. Features include conversation forking at any message, model switching mid-conversation, and visual tree navigation for complex multi-path discussions.",
+      impact: "Multi-model AI integration • Visual conversation branching • Collaborative AI workflows",
+      tech: ["React", "Next.js", "D3.js", "WebSockets", "OpenAI API", "Anthropic API", "Vercel"],
+      url: "https://treegpt-pi.vercel.app",
       order: 4,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "5",
-      title: "CI/CD Automation Pipeline",
-      description:
-        "Comprehensive CI/CD automation system using GitHub Actions, Docker, and cloud deployment tools. Implemented across multiple platforms to reduce deployment time and improve reliability.",
-      impact: "35% deployment time reduction • Automated testing • Improved reliability",
-      tech: ["GitHub Actions", "Docker", "Terraform", "AWS", "Kubernetes", "Jest", "Playwright"],
-      screenshot: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop&crop=center",
+      title: "SMB AI Finance - Smart Reconciliation",
+      description: "Intelligent financial management platform for small/medium businesses combining AI-powered invoice processing with automated bank transaction reconciliation. Integrates with email inboxes to automatically parse incoming invoices and attachments using OCR and natural language processing. Advanced matching algorithms compare invoice data with bank transactions, identifying discrepancies and suggesting reconciliation actions. Features include automated categorization, expense tracking, financial reporting, and audit trail generation for seamless accounting workflows.",
+      impact: "Automated invoice processing • 90% reconciliation accuracy • 60% time savings",
+      tech: ["React", "Next.js", "Python", "OpenAI API", "OCR", "Plaid API", "Vercel"],
+      url: "https://smb-ai-finance.vercel.app",
       order: 5,
+      featured: true,
+      createdAt: "2025-01-01T00:00:00.000Z"
+    },
+    {
+      id: "6",
+      title: "More Projects",
+      description: "Explore additional projects and experiments including blockchain applications, mobile development, DevOps automation, and open-source contributions. From prototype to production, each project demonstrates different aspects of full-stack development and emerging technologies.",
+      impact: "Continuous learning • Technology exploration • Open-source contributions",
+      tech: ["Various Technologies"],
+      url: "#",
+      order: 6,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
   ],
 
   techStack: {
-    languages: [
-      "JavaScript",
-      "TypeScript", 
-      "Python",
-      "SQL",
-      "Go",
-      "Java",
-      "C/C++",
-      "HTML/CSS",
-      "Bash"
-    ],
     frontend: [
       "React",
       "Next.js",
       "Vue",
       "Angular",
+      "TypeScript",
+      "JavaScript",
       "Redux",
       "Zustand",
-      "Jotai", 
-      "ContextAPI",
-      "MUI",
       "TailwindCSS",
-      "Storybook",
+      "MUI",
       "D3.js",
-      "Three.js",
       "Plotly.js",
-      "Electron",
       "WebSockets",
-      "i18n",
-      "Accessibility",
-      "Microfrontends"
+      "Storybook"
     ],
     backend: [
       "Node.js",
       "Express.js",
-      "Nest.js",
+      "Python",
       "Go",
       "FastAPI",
       "Flask",
       "GraphQL",
       "REST",
-      "Microservices",
-      "Redis",
-      "Kafka",
       "PostgreSQL",
       "MongoDB",
-      "Real-time data pipelines",
+      "Redis",
+      "Kafka",
+      "Microservices",
+      "Real-time pipelines",
       "ML model integration"
     ],
-    testing: [
-      "Jest",
-      "Cypress", 
-      "Playwright",
-      "Podman",
-      "Detox",
-      "Unit Testing",
-      "Integration Testing",
-      "End-to-end Testing"
-    ],
-    cloud: [
-      "AWS",
-      "GCP",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "Pulumi",
-      "CI/CD",
-      "GitHub Actions",
-      "Jenkins",
-      "Datadog",
-      "Sentry",
-      "Retool",
-      "Mixpanel",
-      "Grafana"
+    performance: [
+      "Redis Caching",
+      "API Optimization",
+      "Real-time Systems",
+      "WebSocket Connections",
+      "Performance Monitoring",
+      "Load Balancing",
+      "Database Optimization",
+      "CDN Integration",
+      "Lazy Loading",
+      "Code Splitting",
+      "Memory Management",
+      "Latency Reduction"
     ],
     tools: [
       "Git",
       "GitHub",
-      "Jira",
-      "Figma",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Terraform",
+      "GitHub Actions",
+      "Jest",
+      "Cypress",
+      "Playwright",
       "VSCode",
-      "Chrome DevTools",
-      "Postman",
-      "ESLint",
-      "Prettier",
-      "Apache Echarts"
+      "Figma",
+      "Postman"
     ],
     methodologies: [
       "Agile/Scrum",
@@ -246,7 +226,6 @@ export const mockPortfolioData = {
       "DevOps",
       "Team Leadership",
       "Mentoring",
-      "Real-time Systems",
       "Data-driven Development",
       "AI/ML Integration",
       "Performance Optimization"

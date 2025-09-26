@@ -79,7 +79,7 @@ const Portfolio = () => {
                 <motion.div
                   key={i}
                   className={`absolute w-2 h-2 rounded-full ${
-                    i % 2 === 0 ? 'bg-emerald-400/20' : 'bg-teal-400/20'
+                    i % 2 === 0 ? 'bg-blue-400/20' : 'bg-blue-500/20'
                   }`}
                   style={{
                     left: `${10 + i * 20}%`,
@@ -119,14 +119,21 @@ const Portfolio = () => {
             
             {/* Scroll Progress Indicator */}
             <motion.div
-              className="fixed bottom-8 right-8 w-12 h-12 border-2 border-emerald-400/30 rounded-full flex items-center justify-center bg-gray-900/80 backdrop-blur-sm z-40"
-              whileHover={{ scale: 1.1, borderColor: "rgba(16, 185, 129, 0.6)" }}
+              className="fixed bottom-8 right-8 w-12 h-12 border-2 border-blue-400/30 rounded-full flex items-center justify-center bg-slate-900/80 backdrop-blur-sm z-40"
+              whileHover={{ scale: 1.1, borderColor: "rgba(59, 130, 246, 0.6)" }}
               transition={{ duration: 0.2 }}
             >
-              <motion.div
-                className="w-2 h-2 bg-emerald-400 rounded-full"
-                animate={{ scale: [1, 1.3, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <motion.div 
+                className="w-2 h-2 bg-blue-400 rounded-full"
+                animate={{
+                  scale: [1, 1.5, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               />
             </motion.div>
           </motion.div>
