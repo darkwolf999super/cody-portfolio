@@ -93,7 +93,7 @@ export const mockPortfolioData = {
       impact: "40% improvement in user insights • 35% deployment time reduction • ML model production deployment",
       tech: ["React", "Node.js", "Python", "Go", "GraphQL", "AI/ML", "AWS CDK", "Docker"],
       productUrl: "https://databricks.com/",
-      screenshot: "/images/projects/databricks.png",
+      screenshot: "https://databricks.com/wp-content/uploads/2023/05/databricks-ai-bi-dashboards.png",
       order: 1,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -106,7 +106,7 @@ export const mockPortfolioData = {
       impact: "30+ reusable components • Real-time ML insights • Improved dashboard interactivity",
       tech: ["React", "Plotly.js", "Python", "Flask", "GraphQL", "WebSocket", "SSE", "Docker"],
       productUrl: "https://h2o.ai/",
-      screenshot: "/images/projects/h2o.png",
+      screenshot: "https://h2o.ai/content/dam/h2oai/en/marketing/images/logo/H2O-wave-screenshot.png",
       order: 2,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -119,7 +119,7 @@ export const mockPortfolioData = {
       impact: "Enterprise authentication • 35% API latency reduction • Real-time user analytics",
       tech: ["React", "Node.js", "Express.js", "Apache Echarts", "Redis", "OAuth2.0", "OpenID Connect"],
       productUrl: "https://auth0.com/",
-      screenshot: "/images/projects/auth0.png",
+      screenshot: "https://cdn.auth0.com/website/auth0-dashboard-screenshot.png",
       order: 3,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -131,7 +131,7 @@ export const mockPortfolioData = {
         "Collection of real-time interactive dashboards built across multiple platforms, featuring live data streaming, AI/ML integration, and advanced data visualization components.",
       impact: "Real-time insights • Interactive data exploration • Scalable visualization",
       tech: ["React", "D3.js", "WebSockets", "Python", "GraphQL", "Redis", "Kafka"],
-      screenshot: "/images/projects/dashboard.png",
+      screenshot: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
       order: 4,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -143,7 +143,7 @@ export const mockPortfolioData = {
         "Comprehensive CI/CD automation system using GitHub Actions, Docker, and cloud deployment tools. Implemented across multiple platforms to reduce deployment time and improve reliability.",
       impact: "35% deployment time reduction • Automated testing • Improved reliability",
       tech: ["GitHub Actions", "Docker", "Terraform", "AWS", "Kubernetes", "Jest", "Playwright"],
-      screenshot: "/images/projects/cicd.png",
+      screenshot: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&h=600&fit=crop&crop=center",
       order: 5,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"

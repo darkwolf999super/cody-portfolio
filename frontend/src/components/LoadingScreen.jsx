@@ -78,7 +78,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
               animate={{ scale: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <span className="text-emerald-400 font-mono font-bold text-xl">DW</span>
+              <span className="text-emerald-400 font-mono font-bold text-xl">CC</span>
             </motion.div>
           </div>
         </motion.div>
@@ -86,7 +86,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         {/* Loading Text */}
         <motion.div variants={textVariants}>
           <h1 className="text-2xl font-mono font-bold text-gray-100 mb-2">
-            Dwayne Webb
+            Cody Christ
           </h1>
           <p className="text-emerald-400 font-mono text-sm tracking-wider">
             Senior Software Engineer

@@ -115,21 +115,22 @@ async def init_portfolio_data():
     
     # Initialize with mock data
     mock_personal = {
-        "name": "Dwayne Webb",
+        "name": "Cody Christ",
         "title": "Senior Software Engineer",
-        "subtitle": "Product Builder",
-        "tagline": "I ship fast, scale smart, and build beautiful UI that performs.",
-        "phone": "+1 (206) 238 7108",
-        "email": "dwebb001993@gmail.com",
-        "location": "Spokane Valley, WA",
-        "resumeUrl": "https://drive.google.com/file/d/1_nyRnG9mOrOqC0uFUFxGNlX2LWEnFitz/view?usp=sharing"
+        "subtitle": "Engineer | Builder",
+        "tagline": "I've built things that matter — from secure logins to real-time dashboards and ML integrations.",
+        "email": "codyrist0383@gmail.com",
+        "location": "Seattle, WA, 98103",
+        "resumeUrl": "https://codyrist.vercel.app",
+        "linkedin": "https://www.linkedin.com/in/cody-christ-6a2708384/",
+        "portfolio": "https://codyrist.vercel.app"
     }
     
     mock_about = {
-        "summary": "Frontend engineering specialist with 10 years of experience delivering high-performance user interfaces across enterprise platforms, early-stage product teams, and startup-facing consulting projects. Skilled in architecting scalable UI systems, optimizing runtime performance, and shipping design-aligned features with precision and speed.",
-        "experience": "10 years experience across early-stage teams, high-growth startups, and enterprise tools",
-        "expertise": "Deep experience with Next.js, performance tuning, Canvas, a11y, design-to-engineering",
-        "mindset": "Product mindset: I design systems that balance clarity, speed, and iteration"
+        "summary": "I've built things that matter — starting with secure logins at Auth0, moving to real-time dashboards and ML at H2O.ai, and diving into data-driven solutions at Databricks. Full-stack engineer focused on creating user-facing features and APIs with AI/ML integrations.",
+        "experience": "9+ years • Authentication platforms → AI/ML platforms → Data analytics • Focus on full-stack development with AI/ML integration",
+        "expertise": "React/Next.js • Node.js/Python/Go • Real-time systems • AI/ML integration • Data pipelines • Team leadership",
+        "mindset": "I thrive in startup environments, where I can work with smaller, cross-functional teams to make an immediate impact and continuously learn."
     }
     
     mock_looking_for = {
