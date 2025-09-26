@@ -1,81 +1,83 @@
 export const mockPortfolioData = {
   personal: {
-    name: "Dwayne Webb",
+    name: "Cody Christ",
     title: "Senior Software Engineer",
-    subtitle: "Full-Stack Product Builder",
+    subtitle: "Engineer | Builder",
     tagline:
-      "I turn ambiguous ideas into dependable, scalable software—ship fast without cutting quality.",
-    phone: "+1 (352) 218-1218",
-    email: "dwayne1992x@gmail.com",
-    location: "Spokane Valley, WA",
-    resumeUrl: "https://drive.google.com/file/d/15Sr_a1NgZnh8KCgxqhzBW2PRpVh5jYMs/view?usp=drive_link",
-    calendlyUrl: "https://calendly.com/dwayne1992x/30min",
-    github: "https://github.com/dwayneex",
-    portfolio: "#" // "*"
+      "I've built things that matter — from secure logins to real-time dashboards and ML integrations. Full-stack engineer focused on scalable, data-driven solutions.",
+    email: "codyrist0383@gmail.com",
+    location: "Seattle, WA, 98103",
+    resumeUrl: "https://codyrist.vercel.app",
+    linkedin: "https://www.linkedin.com/in/cody-christ-6a2708384/",
+    portfolio: "https://codyrist.vercel.app"
   },
 
   about: {
     summary:
-      "Senior Software Engineer with 10+ years building production systems across logistics, fintech, and developer tooling. Expert in React/Node.js ecosystems with proven track record of shipping high-impact features that directly improve business metrics. Recent passion for GenAI development acceleration using Cursor, Windsurf, and Claude Code.",
+      "I've built things that matter — starting with secure logins at Auth0, moving to real-time dashboards and ML at H2O.ai, and diving into data-driven solutions at Databricks. Along the way, I've learned the power of data, but I'm a full-stack engineer at heart, focused on creating user-facing features and APIs. I specialize in delivering scalable, data-driven solutions and AI/ML integrations with end-to-end expertise, from frontend interfaces to backend systems.",
     experience:
-      "10+ years • Product consultancies → High-growth startups → Enterprise platforms • Recent GenAI-powered development focus",
+      "9+ years • Authentication platforms → AI/ML platforms → Data analytics • Focus on full-stack development with AI/ML integration",
     expertise:
-      "React/Next.js • Node.js/Python • Real-time systems • Performance optimization • Team leadership • AI-assisted development with Cursor/Windsurf/Claude",
+      "React/Next.js • Node.js/Python/Go • Real-time systems • AI/ML integration • Data pipelines • Team leadership",
     mindset:
-      "Ship fast with AI assistance, measure impact, iterate. Quality code is business value, GenAI accelerates delivery.",
+      "I thrive in startup environments, where I can work with smaller, cross-functional teams to make an immediate impact and continuously learn.",
     metrics: [
-      "40% MTTR reduction through DevEx improvements",
-      "18% cost savings via optimization algorithms", 
-      "8s → 200ms latency improvements",
-      "~10K LOC shipped in 48h with Windsurf AI assistance and full test coverage",
-      "5x development speed increase using Cursor and Claude Code for rapid prototyping"
+      "40% improvement in user-facing insights through AI model integration",
+      "35% reduction in deployment time via CI/CD automation", 
+      "35% API latency reduction through Redis caching optimization",
+      "Led development of 30+ reusable visualization components",
+      "Mentored teams of 5 engineers with high code quality standards"
     ]
   },
 
   experience: [
     {
       id: "1",
-      company: "Shipwell",
+      company: "Databricks",
       position: "Senior Software Engineer",
-      duration: "10/2020 - Present",
+      duration: "09/2021 - Present",
       description:
-        "Series B logistics/TMS—led real-time visibility, optimization, and reliability/DevEx improvements.",
+        "Developed high-performance full-stack solutions for data analytics platforms",
       achievements: [
-        "Shipped real-time shipment & order tracking (Python/Redis + WebSockets), cutting dashboard latency from 8s → ~200ms.",
-        "Built fulfillment optimization service (Node.js/Kafka) reducing carrier costs by ~18% via dynamic routing.",
-        "Improved reliability & DevEx: ~40% MTTR reduction with alerting and RCA playbooks; established CI/CD and QA data seeders.",
-        "Delivered exceptions dashboard + auto-summary service (~10K LOC in ~48h) with tight unit/Playwright coverage, unblocking a key customer launch.",
-        "Owned features spanning visibility, load-optimization, dock scheduling, and settlement workflows."
+        "Led the development of real-time interactive dashboards with React, Node.js, and Python, integrating AI models to improve user-facing insights by 40%, enabling scalable, data-driven decision-making.",
+        "Engineered scalable backend APIs with Go, Node.js, and GraphQL, optimizing data pipelines and integrating machine learning models for enhanced user engagement and analysis.",
+        "Partnered with data science teams to deploy ML models to production, improving real-time data processing and predictive analytics.",
+        "Spearheaded the implementation of CI/CD pipelines using GitHub Actions, AWS CDK, Pulumi, and Docker, automating deployments and reducing deployment time by 35%.",
+        "Mentored a team of 5 engineers, fostering collaboration and ensuring high standards of code quality across projects."
       ],
       order: 1,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "2",
-      company: "Work & Co (Accenture Song)",
-      position: "Member of Technical Staff",
-      duration: "11/2016 - 09/2020",
+      company: "H2O.ai",
+      position: "Software Engineer",
+      duration: "01/2019 - 08/2021",
       description:
-        "Design-led consultancy; translated high-fidelity prototypes into production Next.js apps.",
+        "Developed real-time AI-powered data visualizations and integrated ML models into web platforms",
       achievements: [
-        "Standardized delivery with reusable UI libraries; accelerated MVP/v1 launches.",
-        "Built products for wellness, retail, fintech, and sports-teletherapy; quoting/pricing tools, content/MLS UIs, and live-data dashboards.",
-        "Operated as a force-multiplier between design and engineering to ship fast without sacrificing quality."
+        "Developed 30+ reusable visualization components with React and Plotly.js, enabling users to drag-and-drop dashboard elements and interact with data in real time.",
+        "Designed and implemented real-time data streaming features with WebSocket and SSE, allowing live updates of AI/ML insights, improving interactivity of dashboards.",
+        "Created a declarative UI DSL and schema validator for dynamically rendering user interfaces from JSON and Python configurations, facilitating customizable ML workflows for clients.",
+        "Developed scalable backend APIs with Python/Flask and GraphQL, powering real-time data pipelines for AI model result delivery and interactive dashboard updates.",
+        "Implemented CI/CD pipelines with Docker, GitHub Actions, and Terraform, automating deployment and improving reliability."
       ],
       order: 2,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "3",
-      company: "Atlassian",
-      position: "Web Developer",
-      duration: "01/2015 - 11/2016",
+      company: "Auth0",
+      position: "Software Developer",
+      duration: "05/2015 - 01/2019",
       description:
-        "Jira Cloud Ecosystem—reporting plugins prior to native reporting.",
+        "Built scalable authentication features and enhanced user experience with real-time data analysis",
       achievements: [
-        "Built Jira Cloud reporting plugins (Atlassian Connect; Jira REST/JQL, Bitbucket, Confluence).",
-        "Delivered React + D3 dashboards for velocity, time-in-status, and backlog trends with filters/export.",
-        "Adopted Agile/Scrum rituals; shipped features aligned to real engineering reporting needs."
+        "Enhanced the core identity platform by implementing secure authentication flows (OAuth2.0, OpenID Connect, and MFA) for enterprise clients.",
+        "Developed a real-time user analysis dashboard using React and Apache Echarts, enabling internal teams and clients to visualize user behavior and system performance live.",
+        "Built scalable backend services using Node.js and Express.js, handling user provisioning, token validation, and custom login experiences across multiple apps.",
+        "Integrated Redis-based caching strategies, reducing API latency by 35% and enhancing the responsiveness of high-demand endpoints.",
+        "Contributed to Auth0 SDK development, improving developer documentation and accelerating third-party integrations."
       ],
       order: 3,
       createdAt: "2025-01-01T00:00:00.000Z"
@@ -85,217 +87,175 @@ export const mockPortfolioData = {
   projects: [
     {
       id: "1",
-      title: "Shipwell",
+      title: "Databricks Analytics Platform",
       description:
-        "Enterprise TMS platform for freight logistics and supply chain optimization. Built real-time tracking, optimization algorithms, and reliability improvements serving Fortune 500 customers.",
-      impact: "8s → 200ms latency • 18% cost reduction • 40% MTTR reduction",
-      tech: ["React", "Python", "Node.js", "Redis", "WebSockets", "Kafka"],
-      productUrl: "https://www.shipwell.com/",
-      screenshot: "/images/projects/shipwell.png",
+        "High-performance data analytics platform with real-time interactive dashboards and AI model integration. Built scalable backend APIs optimizing data pipelines for enhanced user engagement.",
+      impact: "40% improvement in user insights • 35% deployment time reduction • ML model production deployment",
+      tech: ["React", "Node.js", "Python", "Go", "GraphQL", "AI/ML", "AWS CDK", "Docker"],
+      productUrl: "https://databricks.com/",
+      screenshot: "/images/projects/databricks.png",
       order: 1,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
-      id: "2",
-      title: "Mendelgen",
+      id: "2", 
+      title: "H2O.ai ML Platform",
       description:
-        "AI-powered genetic analysis and research platform providing advanced genomic insights and personalized medicine solutions for healthcare providers.",
-      impact: "Accelerating genetic research • Personalized medicine • Healthcare innovation",
-      tech: ["React", "Python", "AI/ML", "Bioinformatics", "Next.js"],
-      productUrl: "https://mendelgen.com/",
-      screenshot: "/images/projects/mendelgen.png",
+        "Real-time AI-powered data visualization platform with 30+ reusable components. Features drag-and-drop dashboard elements, real-time data streaming, and declarative UI DSL for dynamic ML workflows.",
+      impact: "30+ reusable components • Real-time ML insights • Improved dashboard interactivity",
+      tech: ["React", "Plotly.js", "Python", "Flask", "GraphQL", "WebSocket", "SSE", "Docker"],
+      productUrl: "https://h2o.ai/",
+      screenshot: "/images/projects/h2o.png",
       order: 2,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "3",
-      title: "Order Protection",
+      title: "Auth0 Identity Platform",
       description:
-        "E-commerce order protection and warranty platform providing comprehensive coverage for online purchases, protecting both merchants and customers.",
-      impact: "Merchant protection • Customer satisfaction • Risk mitigation",
-      tech: ["React", "Node.js", "Payment APIs", "Insurance APIs", "TypeScript"],
-      productUrl: "https://orderprotection.com/",
-      screenshot: "/images/projects/orderprotection.png",
+        "Secure authentication and identity management platform with OAuth2.0, OpenID Connect, and MFA implementation. Built real-time user analytics dashboard and scalable backend services.",
+      impact: "Enterprise authentication • 35% API latency reduction • Real-time user analytics",
+      tech: ["React", "Node.js", "Express.js", "Apache Echarts", "Redis", "OAuth2.0", "OpenID Connect"],
+      productUrl: "https://auth0.com/",
+      screenshot: "/images/projects/auth0.png",
       order: 3,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "4",
-      title: "Property Management",
+      title: "Real-time Dashboard Suite",
       description:
-        "AI-powered property management system with automated tenant screening, maintenance scheduling, and financial reporting for real estate professionals.",
-      impact: "Automated workflows • Tenant satisfaction • Operational efficiency",
-      tech: ["React", "AI/ML", "Python", "Database Management", "APIs"],
-      productUrl: "https://portal.foxyai.com/",
-      screenshot: "/images/projects/foxyai.png",
+        "Collection of real-time interactive dashboards built across multiple platforms, featuring live data streaming, AI/ML integration, and advanced data visualization components.",
+      impact: "Real-time insights • Interactive data exploration • Scalable visualization",
+      tech: ["React", "D3.js", "WebSockets", "Python", "GraphQL", "Redis", "Kafka"],
+      screenshot: "/images/projects/dashboard.png",
       order: 4,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "5",
-      title: "Pickleball Platform",
+      title: "CI/CD Automation Pipeline",
       description:
-        "Comprehensive pickleball community platform with court booking, player matching, tournament management, and skill tracking for enthusiasts.",
-      impact: "Community building • Court utilization • Player engagement",
-      tech: ["React", "Node.js", "Geolocation", "Real-time Chat", "Payment"],
-      productUrl: "https://pickleball.com/",
-      screenshot: "/images/projects/pickleball.png",
+        "Comprehensive CI/CD automation system using GitHub Actions, Docker, and cloud deployment tools. Implemented across multiple platforms to reduce deployment time and improve reliability.",
+      impact: "35% deployment time reduction • Automated testing • Improved reliability",
+      tech: ["GitHub Actions", "Docker", "Terraform", "AWS", "Kubernetes", "Jest", "Playwright"],
+      screenshot: "/images/projects/cicd.png",
       order: 5,
-      featured: true,
-      createdAt: "2025-01-01T00:00:00.000Z"
-    },
-    {
-      id: "6",
-      title: "Hospitality Platform",
-      description:
-        "Advanced online ordering and experience builder for restaurants and hospitality businesses, featuring customizable ordering flows and customer engagement tools.",
-      impact: "Order conversion • Customer experience • Revenue optimization",
-      tech: ["React", "Order Management", "Payment Processing", "Analytics"],
-      productUrl: "https://www.paytronix.com/",
-      screenshot: "/images/projects/devex-platform.png",
-      order: 6,
-      featured: true,
-      createdAt: "2025-01-01T00:00:00.000Z"
-    },
-    {
-      id: "7",
-      title: "Insurance Platform",
-      description:
-        "Modern insurance quoting platform with Survey.js integration, Canopy Connect APIs, and Microsoft Dynamics integration for streamlined policy management.",
-      impact: "Quote accuracy • Process automation • Agent productivity",
-      tech: ["React", "Survey.js", "Canopy Connect", "Microsoft Dynamics"],
-      productUrl: "https://www.brightway.com/",
-      screenshot: "/images/projects/brightway.png",
-      order: 7,
-      featured: true,
-      createdAt: "2025-01-01T00:00:00.000Z"
-    },
-    {
-      id: "8",
-      title: "Healthcare CDI Audit",
-      description:
-        "Clinical Documentation Improvement platform using AI to analyze medical records and provide retrospective insights for healthcare quality and compliance.",
-      impact: "Documentation quality • Compliance accuracy • Clinical insights",
-      tech: ["React", "AI/ML", "Healthcare APIs", "Data Analysis", "Python"],
-      productUrl: "https://www.iodinesoftware.com/",
-      screenshot: "/images/projects/optimization-engine.png",
-      order: 8,
-      featured: true,
-      createdAt: "2025-01-01T00:00:00.000Z"
-    },
-    {
-      id: "9",
-      title: "JIRA Analytics",
-      description:
-        "Advanced project dashboard and analytics suite for JIRA with comprehensive reporting, velocity tracking, and team performance insights.",
-      impact: "Team productivity • Project visibility • Data-driven decisions",
-      tech: ["React", "D3.js", "Atlassian APIs", "Analytics", "Dashboard"],
-      productUrl: "https://www.tempo.io/products/project-dashboards-for-jira",
-      screenshot: "/images/projects/jira-analytics.png",
-      order: 9,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
   ],
 
   techStack: {
+    languages: [
+      "JavaScript",
+      "TypeScript", 
+      "Python",
+      "SQL",
+      "Go",
+      "Java",
+      "C/C++",
+      "HTML/CSS",
+      "Bash"
+    ],
     frontend: [
       "React",
       "Next.js",
       "Vue",
-      "TypeScript",
-      "TailwindCSS",
-      "ShadCN",
+      "Angular",
       "Redux",
       "Zustand",
-      "React Query",
+      "Jotai", 
+      "ContextAPI",
+      "MUI",
+      "TailwindCSS",
+      "Storybook",
       "D3.js",
-      "Canvas",
       "Three.js",
-      "WCAG",
-      "Storybook"
-    ],
-    performance: [
-      "Cursor AI",
-      "Windsurf",
-      "Claude Code",
-      "GitHub Copilot",
-      "V0 by Vercel",
-      "AI-assisted debugging",
-      "Rapid prototyping",
-      "Code generation",
-      "Performance profiling",
-      "Bundle optimization"
+      "Plotly.js",
+      "Electron",
+      "WebSockets",
+      "i18n",
+      "Accessibility",
+      "Microfrontends"
     ],
     backend: [
       "Node.js",
-      "Express",
-      "NestJS",
-      "Python",
+      "Express.js",
+      "Nest.js",
+      "Go",
       "FastAPI",
-      "Django",
+      "Flask",
+      "GraphQL",
+      "REST",
+      "Microservices",
+      "Redis",
+      "Kafka",
       "PostgreSQL",
       "MongoDB",
-      "Redis",
-      "REST",
-      "GraphQL",
-      "gRPC",
-      "Kafka",
-      "Event-driven patterns"
+      "Real-time data pipelines",
+      "ML model integration"
+    ],
+    testing: [
+      "Jest",
+      "Cypress", 
+      "Playwright",
+      "Podman",
+      "Detox",
+      "Unit Testing",
+      "Integration Testing",
+      "End-to-end Testing"
     ],
     cloud: [
       "AWS",
       "GCP",
-      "Azure",
       "Docker",
       "Kubernetes",
       "Terraform",
-      "Pulumi/CDK",
-      "Grafana",
-      "CI/CD"
+      "Pulumi",
+      "CI/CD",
+      "GitHub Actions",
+      "Jenkins",
+      "Datadog",
+      "Sentry",
+      "Retool",
+      "Mixpanel",
+      "Grafana"
     ],
     tools: [
-      "Cursor IDE",
-      "Windsurf IDE", 
-      "Claude Code",
       "Git",
       "GitHub",
-      "Bitbucket",
       "Jira",
       "Figma",
       "VSCode",
       "Chrome DevTools",
       "Postman",
-      "Jest",
-      "Cypress",
-      "Playwright",
-      "Cucumber",
       "ESLint",
-      "Prettier"
+      "Prettier",
+      "Apache Echarts"
     ],
     methodologies: [
-      "AI-Accelerated Development",
-      "Component-driven Development",
-      "Design Systems",
-      "Accessibility (WCAG)",
       "Agile/Scrum",
       "TDD/BDD",
       "Code Reviews",
-      "AI-Assisted Pair Programming",
-      "Performance Optimization",
       "CI/CD",
-      "DevEx/Reliability",
-      "Rapid Prototyping with GenAI"
+      "DevOps",
+      "Team Leadership",
+      "Mentoring",
+      "Real-time Systems",
+      "Data-driven Development",
+      "AI/ML Integration",
+      "Performance Optimization"
     ]
   },
 
   lookingFor: {
     title: "What I'm Looking For",
     description:
-      "Small, high-ownership teams where I can own core product UI and broader architecture—especially in logistics/TMS, vertical SaaS, or AI-powered workflows. Senior/Staff SWE or Tech Lead scope with real impact."
+      "I'm eager to contribute my skills and experience to innovative projects that leverage real-time data, AI, and cloud technologies to solve complex problems. Looking for opportunities in data analytics, AI/ML platforms, or full-stack development roles where I can make an immediate impact with cross-functional teams."
   }
 };
