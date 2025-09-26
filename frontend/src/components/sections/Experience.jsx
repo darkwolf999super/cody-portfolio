@@ -63,7 +63,7 @@ const Experience = ({ data }) => {
             transition={{ duration: 0.6, delay: 0.3 }}
           />
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            9+ years building scalable solutions across authentication, AI/ML, and data analytics platforms
+            10+ years building scalable solutions across authentication, AI/ML, and data analytics platforms
           </p>
         </motion.div>
 

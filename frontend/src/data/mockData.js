@@ -10,14 +10,14 @@ export const mockPortfolioData = {
     resumeUrl: "https://drive.google.com/file/d/1LN8G4KOnH0fBskDAqWW50V-7XvQCm9Fa/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/cody-christ-6a2708383/",
     portfolio: "https://codyrist.vercel.app/",
-    github: "https://github.com/codyrist"
+    github: "https://github.com/codywarrior"
   },
 
   about: {
     summary:
       "I've built things that matter — starting with secure logins at Auth0, moving to real-time dashboards and ML at H2O.ai, and diving into data-driven solutions at Databricks. Along the way, I've learned the power of data, but I'm a full-stack engineer at heart, focused on creating user-facing features and APIs. I specialize in delivering scalable, data-driven solutions and AI/ML integrations with end-to-end expertise, from frontend interfaces to backend systems.",
     experience:
-      "9+ years • Authentication platforms → AI/ML platforms → Data analytics • Focus on full-stack development with AI/ML integration",
+      "10+ years • Authentication platforms → AI/ML platforms → Data analytics • Focus on full-stack development with AI/ML integration",
     expertise:
       "React/Next.js • Node.js/Python/Go • Real-time systems • AI/ML integration • Data pipelines • Team leadership",
     mindset:

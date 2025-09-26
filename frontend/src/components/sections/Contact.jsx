@@ -61,7 +61,7 @@ const Contact = ({ data }) => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/codyrist',
+      value: 'github.com/codywarrior',
       href: data.github,
       copyValue: data.github
     }
