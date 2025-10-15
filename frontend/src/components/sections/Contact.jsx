@@ -61,87 +61,86 @@ const Contact = ({ data }) => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/codywarrior',
+      value: 'github.com/qcodyq',
       href: data.github,
       copyValue: data.github
     }
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden">
       {/* Modern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-800/40" />
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-600/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-to-br from-rose-400/8 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-tl from-cyan-400/8 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="section-header"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <MessageCircle className="h-8 w-8 text-blue-400" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          <div className="section-title">
+            <MessageCircle className="h-8 w-8 text-rose-400" />
+            <h2 className="text-white font-bold">
               Let's Connect
             </h2>
           </div>
           <motion.div 
-            className="w-16 h-0.5 bg-blue-500 mx-auto mb-6"
+            className="section-divider"
             initial={{ width: 0 }}
-            animate={inView ? { width: 64 } : { width: 0 }}
+            animate={inView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           />
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Ready to discuss how I can help build exceptional products? Let's talk about your vision.
+          <p className="section-description">
+            Ready to collaborate on your next project? Let's connect and discuss how I can help build exceptional products.
           </p>
         </motion.div>
 
         {/* Contact Methods */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-8">
           {contactMethods.map((method, index) => {
             const IconComponent = method.icon;
             return (
               <motion.div
                 key={index}
-                className="glass-card p-8 text-center group"
+                className="glass-card text-center group"
                 initial={{ y: 30, opacity: 0 }}
                 animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
               >
-                <div className="mb-4">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-500/10 rounded-xl mb-4">
-                    <IconComponent className="h-6 w-6 text-blue-400" />
+                <div className="mb-8">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-800/60 to-slate-700/40 rounded-xl mb-6 border border-slate-600/50 backdrop-blur-sm">
+                    <IconComponent className="h-7 w-7 text-cyan-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-50 mb-2">
+                  <h3 className="text-xl font-semibold text-white mb-6">
                     {method.label}
                   </h3>
                 </div>
                 
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-3">
                   {method.href ? (
                     <a
                       href={method.href}
-                      className="text-slate-300 hover:text-blue-400 transition-colors font-medium"
+                      className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-lg"
                       target={method.href.startsWith('http') ? '_blank' : undefined}
                       rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     >
                       {method.value}
                     </a>
                   ) : (
-                    <span className="text-slate-300 font-medium">
+                    <span className="text-slate-300 font-medium text-lg">
                       {method.value}
                     </span>
                   )}
                   
                   <button
                     onClick={() => handleCopy(method.copyValue, method.label)}
-                    className="text-slate-500 hover:text-blue-400 transition-colors p-1.5 rounded-lg hover:bg-blue-500/10"
+                    className="text-slate-500 hover:text-cyan-400 transition-colors p-2 rounded-xl hover:bg-cyan-500/10 border border-slate-600/50 backdrop-blur-sm"
                   >
                     <AnimatePresence mode="wait">
                       {copied === method.label ? (
@@ -190,7 +189,7 @@ const Contact = ({ data }) => {
 
         {/* Action Buttons */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 mt-16"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}

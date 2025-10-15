@@ -1,86 +1,113 @@
 export const mockPortfolioData = {
   personal: {
-    name: "Cody Christ",
+    name: "Q",
+    fullName: "Cody Christ (Q)",
     title: "Senior Software Engineer",
-    subtitle: "Engineer | Builder",
+    subtitle: "AI-Powered Products | Real-time Systems | Compliance Expert",
     tagline:
-      "I've built things that matter — from secure logins to real-time dashboards and ML integrations. Full-stack engineer focused on scalable, data-driven solutions.",
-    email: "codyrist0383@gmail.com",
-    location: "Seattle, WA, 98103",
-    resumeUrl: "https://drive.google.com/file/d/1LN8G4KOnH0fBskDAqWW50V-7XvQCm9Fa/view?usp=sharing",
+      "I build real-time, AI-assisted products at scale. From resilient UIs with React 18 to LLM observability with guardrails, I blend startup speed with enterprise rigor. 12 years of experience across AI platforms, fintech, and customer support.",
+    email: "qcody1011@gmail.com",
+    phone: "+1 (206) 238 7108",
+    location: "Pasco, WA 99301",
+    resumeUrl: "https://drive.google.com/file/d/1A06OQOoaMIWGUlK8a2U_z5UH9HWKv_zh/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/cody-christ-6a2708383/",
-    portfolio: "https://codyrist.vercel.app/",
-    github: "https://github.com/codywarrior"
+    portfolio: "https://q-cody.vercel.app",
+    github: "https://github.com/qcodyq"
   },
 
   about: {
     summary:
-      "I've built things that matter — starting with secure logins at Auth0, moving to real-time dashboards and ML at H2O.ai, and diving into data-driven solutions at Databricks. Along the way, I've learned the power of data, but I'm a full-stack engineer at heart, focused on creating user-facing features and APIs. I specialize in delivering scalable, data-driven solutions and AI/ML integrations with end-to-end expertise, from frontend interfaces to backend systems.",
+      "Hi, I'm Q! Senior Software Engineer (full-stack) with 12 years building and operating real-time, AI-assisted products at scale. I design resilient, high-performance UIs (React 18 concurrent features, RSC/SSR/ISR, streaming with backoff/resume, WebSockets/WebRTC) and reliable backends (Node/FastAPI, GraphQL/REST, queues). I operationalize LLM features (eval harnesses, guardrails, rollback) and enforce privacy & compliance (SOC 2, PCI, HIPAA-aligned). I invest in observability, SLOs, and cost control so features stay fast, safe, and sustainable.",
     experience:
-      "10+ years • Authentication platforms → AI/ML platforms → Data analytics • Focus on full-stack development with AI/ML integration",
+      "12+ years • AI-powered platforms → Fintech → Customer support • Focus on real-time systems with compliance and observability",
     expertise:
-      "React/Next.js • Node.js/Python/Go • Real-time systems • AI/ML integration • Data pipelines • Team leadership",
+      "React 18 • Next.js • Node.js/FastAPI • LLM integration • Compliance (SOC 2, PCI, HIPAA) • Observability • Team mentorship",
     mindset:
-      "I thrive in startup environments, where I can work with smaller, cross-functional teams to make an immediate impact and continuously learn.",
+      "I thrive in startup environments, where I can work with smaller, cross-functional teams to make an immediate impact and continuously learn. I blend startup speed with enterprise rigor, bringing consulting versatility to every project.",
     metrics: [
-      "40% improvement in user-facing insights through AI model integration",
-      "35% reduction in deployment time via CI/CD automation", 
-      "35% API latency reduction through Redis caching optimization",
-      "Led development of 30+ reusable visualization components",
-      "Mentored teams of 5 engineers with high code quality standards"
+      "Led AI coding assistant surfaces end-to-end with resilient fallbacks",
+      "Built LLM observability with token-cost dashboards and p95 latency targets", 
+      "Established guardrail policies with offline eval harness and automatic rollback",
+      "Delivered HIPAA-aligned telehealth features with field-level encryption",
+      "Mentored engineers on prompt versioning and privacy-first debugging"
     ]
   },
 
   experience: [
     {
       id: "1",
-      company: "Databricks",
+      company: "Replit",
       position: "Senior Software Engineer",
-      duration: "09/2021 - Present",
+      duration: "09/2022 - Present",
       description:
-        "Developed high-performance full-stack solutions for data analytics platforms",
+        "AI-powered developer platform (non-FAANG, massive user base)",
       achievements: [
-        "Led the development of real-time interactive dashboards with React, Node.js, and Python, integrating AI models to improve user-facing insights by 40%, enabling scalable, data-driven decision-making.",
-        "Engineered scalable backend APIs with Go, Node.js, and GraphQL, optimizing data pipelines and integrating machine learning models for enhanced user engagement and analysis.",
-        "Partnered with data science teams to deploy ML models to production, improving real-time data processing and predictive analytics.",
-        "Spearheaded the implementation of CI/CD pipelines using GitHub Actions, AWS CDK, Pulumi, and Docker, automating deployments and reducing deployment time by 35%.",
-        "Mentored a team of 5 engineers, fostering collaboration and ensuring high standards of code quality across projects."
+        "Led AI coding assistant surfaces end-to-end (routing, context retrieval, inline suggestions, streaming UX) with resilient fallbacks for timeouts, rate limits, and partial completions.",
+        "Implemented prompt & artifact store with per-tenant isolation, retention windows, encryption at rest (KMS), and privacy-aware logs; aligned workflows to SOC 2 change control.",
+        "Built LLM observability: prompt/response traces, token-cost dashboards, p95 latency targets, and model-tier routing to keep spend and performance within budget.",
+        "Established guardrail policies (prompt-injection, PII, toxicity) and an offline eval harness with red-team sets and automatic rollback on quality or safety regressions.",
+        "Co-maintained design-system primitives for AI interactions (explain/fix, intent disambiguation, confidence hints) with a11y checks baked into CI and locale-safe copy for prompts/UI.",
+        "Partnered with SRE to define SLOs and incident runbooks for AI paths; added targeted alerts and pre-mortem checks that eliminated repeat incidents on key flows.",
+        "Mentored engineers on prompt versioning, privacy-first debugging, and contract tests between routing, eval, and serving services."
       ],
       order: 1,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "2",
-      company: "H2O.ai",
-      position: "Software Engineer",
-      duration: "01/2019 - 08/2021",
+      company: "Thoughtbot",
+      position: "Senior Software Engineer / Technical Lead",
+      duration: "10/2018 - 08/2022",
       description:
-        "Developed real-time AI-powered data visualizations and integrated ML models into web platforms",
+        "Boutique consultancy for startups & regulated orgs",
       achievements: [
-        "Developed 30+ reusable visualization components with React and Plotly.js, enabling users to drag-and-drop dashboard elements and interact with data in real time.",
-        "Designed and implemented real-time data streaming features with WebSocket and SSE, allowing live updates of AI/ML insights, improving interactivity of dashboards.",
-        "Created a declarative UI DSL and schema validator for dynamically rendering user interfaces from JSON and Python configurations, facilitating customizable ML workflows for clients.",
-        "Developed scalable backend APIs with Python/Flask and GraphQL, powering real-time data pipelines for AI model result delivery and interactive dashboard updates.",
-        "Implemented CI/CD pipelines with Docker, GitHub Actions, and Terraform, automating deployment and improving reliability."
+        "Drove multi-client delivery across healthcare, fintech, real estate, and AI tooling—owning architecture, scoping/RFCs, and steady release cadence from discovery to launch.",
+        "Delivered HIPAA-aligned telehealth features: RBAC, field-level encryption, audit logs, secure document exchange; authored DPIAs, data-flow diagrams, and retention policies.",
+        "Built retrieval-augmented assistants for policy/claims and document triage with eval gates, safe fallbacks, and cost-aware model selection.",
+        "Created a token-driven design system and schema-based form engine to reduce UI defects and accelerate iteration across web and mobile.",
+        "Set up CI/CD + IaC (GitHub Actions, Terraform/Pulumi) with preview apps, smoke/contract tests, and SLO dashboards clients could own post-engagement.",
+        "Guided stakeholders through trade-offs (scope, risks, compliance), translating ambiguity into small, testable milestones without compromising quality.",
+        "Introduced observability basics (OpenTelemetry traces, error budgets) so teams could measure reliability before growth inflection points."
       ],
       order: 2,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "3",
-      company: "Auth0",
-      position: "Software Developer",
-      duration: "05/2015 - 01/2019",
+      company: "Stripe",
+      position: "Software Engineer",
+      duration: "12/2015 - 10/2018",
       description:
-        "Built scalable authentication features and enhanced user experience with real-time data analysis",
+        "Enterprise-grade fintech platform",
       achievements: [
-        "Enhanced the core identity platform by implementing secure authentication flows (OAuth2.0, OpenID Connect, and MFA) for enterprise clients.",
-        "Developed a real-time user analysis dashboard using React and Apache Echarts, enabling internal teams and clients to visualize user behavior and system performance live.",
-        "Built scalable backend services using Node.js and Express.js, handling user provisioning, token validation, and custom login experiences across multiple apps.",
-        "Integrated Redis-based caching strategies, reducing API latency by 35% and enhancing the responsiveness of high-demand endpoints.",
-        "Contributed to Auth0 SDK development, improving developer documentation and accelerating third-party integrations."
+        "Contributed to Stripe CLI and Dashboard flows (local webhooks, signed test events, env scaffolding) and added DX telemetry to reduce onboarding friction.",
+        "Improved webhook reliability with idempotency, retry/backoff, and dashboards; collaborated cross-team to remove failure hotspots and tighten operational contracts.",
+        "Supported Payment Intents and internal GraphQL tooling with consistent error semantics and discoverable docs used by multiple product teams.",
+        "Worked with Security/Compliance on PCI DSS / SOC 2 concerns-secrets hygiene, change control, audit trails-and shared secure-coding guidelines with UI/SDK teams.",
+        "Co-authored a shared React/TypeScript component library for internal tools to standardize UX and expedite accessibility reviews.",
+        "Participated in on-call rotations and post-mortems, adding preventative checks that reduced alert noise.",
+        "Closed the loop with DevRel/Support to turn real-world developer pain into CLI/Dashboard fixes."
       ],
       order: 3,
+      createdAt: "2025-01-01T00:00:00.000Z"
+    },
+    {
+      id: "4",
+      company: "Intercom",
+      position: "Frontend Engineer",
+      duration: "02/2013 - 10/2015",
+      description:
+        "Early product-stage customer-support platform",
+      achievements: [
+        "Built real-time inbox features (React + WebSockets/SSE): presence, typing, optimistic updates, and state management tuned for high-throughput teams.",
+        "Partnered with Design to establish accessible, theme-able UI primitives that evolved into foundational design system patterns.",
+        "Instrumented RUM and product analytics to prioritize responsiveness and clarity over surface area; fed insights into roadmap decisions.",
+        "Explored early semantic-search and templated responses-precursors to modern AI support flows.",
+        "Implemented a11y gates (keyboard support, focus order, contrast) and pragmatic testing (component, contract, smoke) to keep velocity without regressions.",
+        "Coordinated closely with Support Ops and PMs to ship incremental, measurable improvements to agent workflows.",
+        "Documented conventions for error handling, stream resilience, and code review to raise team consistency."
+      ],
+      order: 4,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
   ],
@@ -88,67 +115,66 @@ export const mockPortfolioData = {
   projects: [
     {
       id: "1",
-      title: "Databricks Analytics Platform",
-      description: "Enterprise data analytics platform delivering real-time insights through AI-powered dashboards. Architected scalable backend APIs optimizing data pipelines for enhanced user engagement and built comprehensive ML model deployment infrastructure. Integrated advanced visualization components with streaming data processing capabilities, enabling business intelligence teams to make data-driven decisions with 40% faster insight generation. Implemented robust authentication systems and role-based access controls for enterprise-grade security.",
-      impact: "40% improvement in user insights • 35% deployment time reduction • ML model production deployment",
-      tech: ["React", "Node.js", "Python", "Go", "GraphQL", "AI/ML", "AWS CDK", "Docker"],
-      url: "https://databricks.com/product/data-intelligence-platform",
+      title: "AI Coding Assistant at Replit",
+      description: "Built AI coding assistant with routing, context retrieval, and streaming UX. Implemented LLM observability, guardrails, and cost control dashboards.",
+      impact: "✨ Resilient AI fallbacks • 🔒 SOC 2 compliance • 📊 Cost optimization",
+      tech: ["React", "TypeScript", "LLM APIs", "Observability"],
+      url: "https://replit.com",
+      image: "/images/replit-preview.jpg",
+      status: "Production",
       order: 1,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "2", 
-      title: "H2O.ai ML Platform",
-      description: "Interactive ML visualization framework featuring 30+ drag-and-drop components for rapid dashboard creation. Built comprehensive real-time streaming infrastructure using declarative Python DSL, enabling data scientists to create dynamic ML workflows without frontend expertise. Developed custom visualization widgets with Plotly.js integration, supporting real-time model monitoring, A/B testing interfaces, and collaborative analytics environments. Implemented WebSocket-based live data streaming with server-sent events for seamless user experience and sub-second latency updates.",
-      impact: "30+ reusable components • Real-time ML insights • Improved dashboard interactivity",
-      tech: ["React", "Plotly.js", "Python", "Flask", "GraphQL", "WebSocket", "SSE", "Docker"],
-      url: "https://wave.h2o.ai/",
+      title: "Healthcare & Fintech Solutions",
+      description: "Led multi-client delivery for healthcare and fintech. Built HIPAA-compliant telehealth features and RAG assistants with privacy controls.",
+      impact: "🏥 HIPAA compliance • 🤖 RAG assistants • 🎨 Design systems",
+      tech: ["React", "Python", "HIPAA", "RAG", "Terraform"],
+      url: "https://thoughtbot.com",
+      image: "/images/thoughtbot-preview.jpg",
+      status: "Multiple Clients",
       order: 2,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "3",
-      title: "Auth0 Identity Platform",
-      description: "Enterprise identity management system implementing OAuth2.0, OpenID Connect, and multi-factor authentication protocols. Developed comprehensive real-time user analytics dashboard with advanced security monitoring and threat detection capabilities. Built high-performance authentication APIs handling millions of requests with Redis-based session management and distributed caching. Integrated Apache ECharts for interactive security metrics visualization, user behavior analytics, and compliance reporting. Implemented adaptive authentication flows with risk-based access controls and anomaly detection algorithms.",
-      impact: "Enterprise authentication • 35% API latency reduction • Real-time user analytics",
-      tech: ["React", "Node.js", "Express.js", "Apache Echarts", "Redis", "OAuth2.0", "OpenID Connect"],
-      url: "https://auth0.com/platform",
+      title: "Stripe Payment Infrastructure",
+      description: "Enhanced Stripe CLI and Dashboard with webhook reliability, GraphQL tooling, and PCI compliance. Reduced developer onboarding friction.",
+      impact: "⚡ Developer experience • 🔄 Webhook reliability • 🛡️ PCI compliance",
+      tech: ["TypeScript", "GraphQL", "CLI tools", "PCI DSS"],
+      url: "https://stripe.com",
+      image: "/images/stripe-preview.jpg",
+      status: "Enterprise Scale",
       order: 3,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "4",
-      title: "TreeGPT - Branching Conversations",
-      description: "Revolutionary AI chat platform supporting conversation branching with multiple language models (GPT-4, Claude, Gemini). Built comprehensive conversation management system with D3.js visualization for exploring conversation trees and decision paths. Implemented secure authentication flows, real-time chat interface with WebSocket connections, and advanced sharing/export/import functionality for collaborative AI workflows. Features include conversation forking at any message, model switching mid-conversation, and visual tree navigation for complex multi-path discussions.",
-      impact: "Multi-model AI integration • Visual conversation branching • Collaborative AI workflows",
-      tech: ["React", "Next.js", "D3.js", "WebSockets", "OpenAI API", "Anthropic API", "Vercel"],
-      url: "https://treegpt-pi.vercel.app",
+      title: "Intercom Real-time Platform",
+      description: "Built real-time inbox with WebSockets, presence indicators, and design system foundations. Focused on accessibility and performance.",
+      impact: "💬 Real-time messaging • ♿ Accessibility standards • 🎨 Design foundations",
+      tech: ["React", "WebSockets", "Design Systems", "a11y"],
+      url: "https://intercom.com",
+      image: "/images/intercom-preview.jpg",
+      status: "High Scale",
       order: 4,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     },
     {
       id: "5",
-      title: "SMB AI Finance - Smart Reconciliation",
-      description: "Intelligent financial management platform for small/medium businesses combining AI-powered invoice processing with automated bank transaction reconciliation. Integrates with email inboxes to automatically parse incoming invoices and attachments using OCR and natural language processing. Advanced matching algorithms compare invoice data with bank transactions, identifying discrepancies and suggesting reconciliation actions. Features include automated categorization, expense tracking, financial reporting, and audit trail generation for seamless accounting workflows.",
-      impact: "Automated invoice processing • 90% reconciliation accuracy • 60% time savings",
-      tech: ["React", "Next.js", "Python", "OpenAI API", "OCR", "Plaid API", "Vercel"],
-      url: "https://smb-ai-finance.vercel.app",
+      title: "TreeGPT - AI Conversation Trees",
+      description: "Multi-model AI chat with conversation branching visualization. Supports GPT-4, Claude, and Gemini with D3.js tree navigation.",
+      impact: "🤖 Multi-model AI • 🌳 Visual branching • 🚀 Live demo available",
+      tech: ["Next.js", "D3.js", "OpenAI", "Anthropic"],
+      url: "https://treegpt-pi.vercel.app",
+      image: "/images/treegpt-preview.jpg",
+      status: "Live Demo",
       order: 5,
-      featured: true,
-      createdAt: "2025-01-01T00:00:00.000Z"
-    },
-    {
-      id: "6",
-      title: "More Projects",
-      description: "Explore additional projects and experiments including blockchain applications, mobile development, DevOps automation, and open-source contributions. From prototype to production, each project demonstrates different aspects of full-stack development and emerging technologies.",
-      impact: "Continuous learning • Technology exploration • Open-source contributions",
-      tech: ["Various Technologies"],
-      url: "#",
-      order: 6,
       featured: true,
       createdAt: "2025-01-01T00:00:00.000Z"
     }
@@ -156,85 +182,108 @@ export const mockPortfolioData = {
 
   techStack: {
     frontend: [
-      "React",
-      "Next.js",
-      "Vue",
-      "Angular",
+      "React 18",
+      "Next.js (SSR/ISR/Edge)",
       "TypeScript",
-      "JavaScript",
-      "Redux",
-      "Zustand",
-      "TailwindCSS",
-      "MUI",
-      "D3.js",
-      "Plotly.js",
-      "WebSockets",
-      "Storybook"
+      "Vue.js",
+      "WebSockets/SSE",
+      "WebRTC",
+      "Three.js",
+      "D3",
+      "Mapbox GL/Deck.gl",
+      "React Native",
+      "Streaming/Optimistic UI",
+      "Virtualization (react-virtual)",
+      "Canvas/WebGL"
+    ],
+    designSystems: [
+      "Storybook",
+      "Design tokens",
+      "Tailwind",
+      "Radix UI/Shadcn",
+      "CSS-in-JS",
+      "WCAG 2.1 AA",
+      "Axe",
+      "ARIA/Keyboard traps",
+      "Accessibility in CI",
+      "Intl/Localization",
+      "RTL"
     ],
     backend: [
-      "Node.js",
-      "Express.js",
-      "Python",
+      "Node.js (Express/NestJS)",
+      "Python (FastAPI/Django/Flask)",
       "Go",
-      "FastAPI",
-      "Flask",
-      "GraphQL",
-      "REST",
-      "PostgreSQL",
+      "Ruby",
+      "Java Spring Boot",
+      "C#/.NET",
+      "GraphQL (Apollo/Federation)",
+      "REST/OpenAPI/Swagger",
+      "gRPC",
+      "Prisma/TypeORM/Sequelize"
+    ],
+    aiProductization: [
+      "RAG",
+      "Embeddings",
+      "Vector DBs (Pinecone/Qdrant/FAISS)",
+      "LangChain/LlamaIndex",
+      "Prompt routing/Versioning",
+      "Offline eval harnesses",
+      "Red-teaming",
+      "Guardrails & Rollback",
+      "Token-cost dashboards",
+      "OpenAI/Anthropic/Bedrock/Vertex AI",
+      "Reranking",
+      "Hallucination tests"
+    ],
+    reliability: [
+      "CI/CD (GitHub Actions/CircleCI/Jenkins)",
+      "IaC (Terraform/Pulumi/CDK)",
+      "Feature flags (LaunchDarkly/GrowthBook)",
+      "SLO/SLI/SLA",
+      "Prometheus/Grafana",
+      "Datadog",
+      "Sentry/LogRocket",
+      "Docker/Kubernetes (EKS/ECS/GKE)",
+      "Helm",
+      "Argo CD",
+      "Nginx",
+      "Vercel/Cloudflare"
+    ],
+    dataStreaming: [
+      "PostgreSQL/MySQL",
       "MongoDB",
       "Redis",
-      "Kafka",
-      "Microservices",
-      "Real-time pipelines",
-      "ML model integration"
-    ],
-    performance: [
-      "Redis Caching",
-      "API Optimization",
-      "Real-time Systems",
-      "WebSocket Connections",
-      "Performance Monitoring",
-      "Load Balancing",
-      "Database Optimization",
-      "CDN Integration",
-      "Lazy Loading",
-      "Code Splitting",
-      "Memory Management",
-      "Latency Reduction"
-    ],
-    tools: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "GCP",
-      "Terraform",
-      "GitHub Actions",
-      "Jest",
-      "Cypress",
-      "Playwright",
-      "VSCode",
-      "Figma",
-      "Postman"
-    ],
-    methodologies: [
-      "Agile/Scrum",
-      "TDD/BDD",
-      "Code Reviews",
-      "CI/CD",
-      "DevOps",
-      "Team Leadership",
-      "Mentoring",
-      "Data-driven Development",
-      "AI/ML Integration",
-      "Performance Optimization"
+      "S3",
+      "Kafka/RabbitMQ/Kinesis/SQS/SNS",
+      "Elasticsearch/OpenSearch",
+      "Snowflake/Databricks Delta/BigQuery",
+      "ETL/ELT",
+      "Airflow/DBT/Spark",
+      "Event-driven services",
+      "OpenTelemetry tracings"
     ]
   },
 
+  education: {
+    degree: "B.S. Computer Science",
+    school: "University of Alaska Anchorage",
+    description: "Comprehensive computer science foundation covering algorithms, data structures, software engineering principles, and systems design."
+  },
+
   lookingFor: {
-    title: "What I'm Looking For",
+    title: "What I'm Looking For Next",
     description:
-      "I'm eager to contribute my skills and experience to innovative projects that leverage real-time data, AI, and cloud technologies to solve complex problems. Looking for opportunities in data analytics, AI/ML platforms, or full-stack development roles where I can make an immediate impact with cross-functional teams."
+      "I'm looking for senior engineering roles where I can leverage my experience building AI-powered products at scale. I'm interested in positions that combine technical leadership with hands-on development, particularly in AI/ML platforms, real-time systems, or developer tools. I thrive in environments that value observability, compliance, and sustainable product development with cross-functional collaboration."
+  },
+
+  showcase: {
+    title: "Current Focus",
+    items: [
+      "🎯 AI/ML platform engineering with LLM observability",
+      "🔒 Compliance-first development (SOC 2, HIPAA, PCI)",
+      "⚡ Real-time systems with resilient architectures",
+      "🎨 Design systems with accessibility at the core",
+      "📊 Observability and cost optimization strategies"
+    ]
   }
 };

@@ -34,43 +34,42 @@ const Experience = ({ data }) => {
     }
   };
   return (
-    <section id="experience" className="py-24 relative overflow-hidden">
+    <section id="experience" className="relative overflow-hidden">
       {/* Modern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-800/20" />
-        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-600/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-br from-indigo-400/6 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-cyan-400/6 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="section-header"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <Briefcase className="h-8 w-8 text-blue-400" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          <div className="section-title">
+            <Briefcase className="h-8 w-8 text-indigo-400" />
+            <h2 className="text-white font-bold">
               Experience
             </h2>
           </div>
           <motion.div 
-            className="w-16 h-0.5 bg-blue-500 mx-auto mb-6"
+            className="section-divider"
             initial={{ width: 0 }}
-            animate={inView ? { width: 64 } : { width: 0 }}
+            animate={inView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           />
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            10+ years building scalable solutions across authentication, AI/ML, and data analytics platforms
+          <p className="section-description">
+            12+ years building AI-powered products at scale across developer platforms, fintech, and customer support
           </p>
         </motion.div>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {/* Timeline Line */}
           <motion.div
-            className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-500 hidden lg:block"
+            className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 via-indigo-400 to-cyan-400 hidden lg:block"
             initial={{ height: 0 }}
             animate={inView ? { height: "100%" } : { height: 0 }}
             transition={{ duration: 1.5, delay: 0.5 }}
@@ -86,14 +85,14 @@ const Experience = ({ data }) => {
             >
               {/* Timeline Dot */}
               <motion.div
-                className="absolute left-5 top-8 w-3 h-3 bg-blue-400 rounded-full border-4 border-slate-950 hidden lg:block z-10"
+                className="absolute left-6 top-10 w-4 h-4 bg-gradient-to-r from-cyan-400 to-indigo-400 rounded-full border-4 border-slate-950 hidden lg:block z-10 shadow-lg shadow-cyan-400/50"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={inView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
                 transition={{ delay: index * 0.15 + 0.8, duration: 0.3 }}
                 whileHover={{ scale: 1.3 }}
               />
               
-              <div className="lg:ml-12 glass-card p-8 group">
+              <div className="lg:ml-16 glass-card group">
                 <motion.div 
                   className="mb-6"
                   initial={{ y: 20, opacity: 0 }}
@@ -109,12 +108,12 @@ const Experience = ({ data }) => {
                         {job.company}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full border border-slate-700/50">
-                      <Calendar className="h-4 w-4 text-blue-400" />
-                      <span className="text-slate-300 text-sm font-medium">{job.duration}</span>
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-slate-800/60 to-slate-700/40 px-5 py-3 rounded-2xl border border-slate-600/50 backdrop-blur-sm">
+                      <Calendar className="h-4 w-4 text-cyan-400" />
+                      <span className="text-slate-300 text-sm font-semibold">{job.duration}</span>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed mb-6">
+                  <p className="text-slate-300 leading-relaxed mb-6 text-base">
                     {job.description}
                   </p>
                 </motion.div>
@@ -127,12 +126,12 @@ const Experience = ({ data }) => {
                   {job.achievements.map((achievement, achievementIndex) => (
                     <motion.div
                       key={achievementIndex} 
-                      className="flex items-start gap-3 p-4 bg-slate-800/30 rounded-xl border border-slate-700/30"
+                      className="flex items-start gap-3 p-4 bg-gradient-to-r from-slate-800/40 to-slate-700/20 rounded-xl border border-slate-600/30 backdrop-blur-sm"
                       initial={{ opacity: 0, x: -20 }}
                       animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                       transition={{ delay: index * 0.15 + 0.8 + achievementIndex * 0.1, duration: 0.5 }}
                     >
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-indigo-400 rounded-full mt-2 flex-shrink-0" />
                       <p className="text-slate-300 leading-relaxed text-sm">
                         {achievement}
                       </p>

@@ -40,16 +40,15 @@ const Hero = ({ data }) => {
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Modern Background Grid */}
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden py-0">
+      {/* Modern Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.3) 1px, transparent 0)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 212, 255, 0.1) 1px, transparent 0)`,
+          backgroundSize: '60px 60px'
         }} />
-        <div className="absolute top-20 right-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-indigo-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-tr from-indigo-500/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -84,7 +83,7 @@ const Hero = ({ data }) => {
                 >
                   <span className="text-slate-50">Hello, I'm </span>
                   <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                    {data.name}
+                    {data.fullName || data.name}
                   </span>
                 </motion.h1>
 
@@ -109,14 +108,14 @@ const Hero = ({ data }) => {
 
                 {/* CTA Buttons */}
                 <motion.div
-                  className="flex flex-col sm:flex-row gap-4 pt-6"
+                  className="flex flex-col sm:flex-row gap-4 pt-8"
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
                   <motion.button
-                    className="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
-                    whileHover={{ scale: 1.02 }}
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                    whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={scrollToAbout}
                   >
@@ -126,8 +125,8 @@ const Hero = ({ data }) => {
                   
                   {data.resumeUrl && (
                     <motion.button
-                      className="inline-flex items-center gap-2 border border-slate-600 text-slate-300 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition-all duration-200"
-                      whileHover={{ scale: 1.02 }}
+                      className="inline-flex items-center gap-3 border-2 border-slate-700 hover:border-cyan-400 text-slate-300 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm"
+                      whileHover={{ scale: 1.02, y: -1 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => window.open(data.resumeUrl, '_blank')}
                     >
@@ -177,7 +176,7 @@ const Hero = ({ data }) => {
                     <div className="w-full h-full bg-slate-800/20 rounded-2xl overflow-hidden backdrop-blur-sm">
                       <img
                         src="/Cody.png"
-                        alt={data.name}
+                        alt="Q"
                         className="w-full h-full object-cover object-center"
                       />
                     </div>

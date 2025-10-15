@@ -64,7 +64,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <div className="text-3xl font-bold text-slate-50 mb-3">
-            Cody Christ
+            Q
           </div>
           <div className="text-blue-400 text-sm font-medium tracking-wide">
             Senior Software Engineer

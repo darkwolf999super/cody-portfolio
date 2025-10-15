@@ -72,7 +72,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <span className="relative">
-              CC
+              Q
             </span>
           </motion.div>
           

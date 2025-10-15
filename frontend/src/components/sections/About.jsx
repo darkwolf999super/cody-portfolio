@@ -53,64 +53,65 @@ const About = ({ data }) => {
   };
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="relative overflow-hidden">
       {/* Modern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-800/30" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-600/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-gradient-to-br from-cyan-400/8 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-gradient-to-tr from-indigo-500/8 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="section-header"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <User className="h-8 w-8 text-blue-400" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          <div className="section-title">
+            <User className="h-8 w-8 text-cyan-400" />
+            <h2 className="text-white font-bold">
               About Me
             </h2>
           </div>
           <motion.div 
-            className="w-16 h-0.5 bg-blue-500 mx-auto mb-8"
+            className="section-divider"
             initial={{ width: 0 }}
-            animate={inView ? { width: 64 } : { width: 0 }}
+            animate={inView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           />
-          <p className="text-xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
+          <p className="section-description">
             {data.summary}
           </p>
         </motion.div>
 
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Key Info */}
           <motion.div
-            className="space-y-8"
+            className="space-y-12"
             initial={{ x: -50, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold text-slate-50 mb-4 flex items-center gap-2">
-                <Code className="h-5 w-5 text-blue-400" />
+            <div className="glass-card">
+              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <Code className="h-5 w-5 text-cyan-400" />
                 Experience & Focus
               </h3>
-              <p className="text-slate-300 leading-relaxed mb-6">
-                {data.experience}
-              </p>
-              <p className="text-slate-300 leading-relaxed">
-                {data.mindset}
-              </p>
+              <div className="space-y-6">
+                <p className="text-slate-300 leading-relaxed">
+                  {data.experience}
+                </p>
+                <p className="text-slate-300 leading-relaxed">
+                  {data.mindset}
+                </p>
+              </div>
             </div>
             
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold text-slate-50 mb-4 flex items-center gap-2">
-                <Zap className="h-5 w-5 text-blue-400" />
+            <div className="glass-card">
+              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <Zap className="h-5 w-5 text-indigo-400" />
                 Technical Expertise
               </h3>
               <p className="text-slate-300 leading-relaxed">
@@ -126,22 +127,22 @@ const About = ({ data }) => {
             animate={inView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="glass-card p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold text-slate-50 mb-6 flex items-center gap-2">
-                <Target className="h-5 w-5 text-blue-400" />
+            <div className="glass-card">
+              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <Target className="h-5 w-5 text-emerald-400" />
                 Key Achievements
               </h3>
               <div className="space-y-4">
                 {data.metrics.map((metric, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-start gap-3 p-4 bg-slate-800/30 rounded-xl border border-slate-700/30"
+                    className="flex items-start gap-3 p-4 bg-gradient-to-r from-slate-800/40 to-slate-700/20 rounded-xl border border-slate-600/30 backdrop-blur-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                     transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                   >
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
-                    <p className="text-slate-300 text-sm leading-relaxed">{metric}</p>
+                    <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-indigo-400 rounded-full mt-2 flex-shrink-0" />
+                    <p className="text-slate-300 leading-relaxed">{metric}</p>
                   </motion.div>
                 ))}
               </div>
@@ -150,7 +151,7 @@ const About = ({ data }) => {
         </div>
 
         <motion.div 
-          className="grid lg:grid-cols-3 gap-8"
+          className="grid lg:grid-cols-3 gap-8 mt-16"
           variants={itemVariants}
         >
           {/* Background Details */}

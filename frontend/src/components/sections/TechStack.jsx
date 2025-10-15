@@ -11,75 +11,81 @@ const TechStack = ({ data = {} }) => {
 
   const categories = [
     { 
-      title: 'Frontend', 
+      title: 'Frontend & Real-time UX', 
       icon: Code, 
       techs: data.frontend || []
     },
     { 
-      title: 'Backend & Data', 
+      title: 'Design Systems & Accessibility', 
+      icon: FileText, 
+      techs: data.designSystems || []
+    },
+    { 
+      title: 'Backend & APIs', 
       icon: Database, 
       techs: data.backend || []
     },
     { 
-      title: 'Performance', 
+      title: 'AI Productization', 
       icon: Zap, 
-      techs: data.performance || []
+      techs: data.aiProductization || []
     },
     { 
-      title: 'Tools & Platforms', 
+      title: 'Reliability & DevOps', 
       icon: Settings, 
-      techs: data.tools || []
+      techs: data.reliability || []
     },
     { 
-      title: 'Methodology', 
-      icon: FileText, 
-      techs: data.methodologies || []
+      title: 'Data & Streaming', 
+      icon: Database, 
+      techs: data.dataStreaming || []
     }
   ];
 
 
   return (
-    <section id="tech-stack" className="py-24 relative overflow-hidden">
+    <section id="tech-stack" className="relative overflow-hidden">
       {/* Modern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 to-slate-800/30" />
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-600/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-to-br from-violet-400/8 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-tl from-cyan-400/8 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="section-header"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <Code className="h-8 w-8 text-blue-400" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          <div className="section-title">
+            <Code className="h-8 w-8 text-violet-400" />
+            <h2 className="text-white font-bold">
               Tech Stack
             </h2>
           </div>
           <motion.div 
-            className="w-16 h-0.5 bg-blue-500 mx-auto mb-6"
+            className="section-divider"
             initial={{ width: 0 }}
-            animate={inView ? { width: 64 } : { width: 0 }}
+            animate={inView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           />
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+          <p className="section-description">
             Technologies and methodologies I use to build scalable, performant applications
           </p>
         </motion.div>
 
         {/* Categories Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {categories.map((category, index) => {
             const IconComponent = category.icon;
+            const colors = ['text-cyan-400', 'text-indigo-400', 'text-violet-400', 'text-emerald-400', 'text-orange-400', 'text-rose-400'];
+            const iconColor = colors[index % colors.length];
             return (
               <motion.div
                 key={index}
-                className="glass-card p-8 group"
+                className="glass-card group"
                 initial={{ y: 30, opacity: 0 }}
                 animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -87,8 +93,10 @@ const TechStack = ({ data = {} }) => {
               >
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <IconComponent className="h-6 w-6 text-blue-400" />
-                    <h3 className="text-xl font-semibold text-slate-50">
+                    <div className={`p-2 bg-gradient-to-br from-slate-800/60 to-slate-700/40 rounded-xl border border-slate-600/50 backdrop-blur-sm`}>
+                      <IconComponent className={`h-5 w-5 ${iconColor}`} />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">
                       {category.title}
                     </h3>
                   </div>
@@ -98,11 +106,11 @@ const TechStack = ({ data = {} }) => {
                   {category.techs.map((tech, techIndex) => (
                     <motion.span
                       key={techIndex}
-                      className="px-3 py-1.5 bg-slate-800/50 text-slate-300 rounded-lg text-sm border border-slate-700/50 hover:border-blue-500/50 hover:text-blue-300 transition-colors cursor-default"
+                      className="px-3 py-1.5 bg-gradient-to-r from-slate-800/60 to-slate-700/40 text-slate-300 rounded-lg text-xs border border-slate-600/50 hover:border-cyan-400/50 hover:text-cyan-300 transition-all duration-300 cursor-default backdrop-blur-sm font-medium"
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                       transition={{ delay: index * 0.1 + techIndex * 0.05 + 0.3, duration: 0.4 }}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.05, y: -1 }}
                     >
                       {tech}
                     </motion.span>

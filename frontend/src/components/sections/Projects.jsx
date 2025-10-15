@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, TrendingUp, Github, Eye, ImageIcon, X, Play, Info, Star, Zap } from 'lucide-react';
+import { ExternalLink, TrendingUp, Github, Eye, ImageIcon, X, Play, Info, Star, Zap, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Card, CardContent, CardHeader } from '../ui/card';
@@ -37,49 +37,48 @@ const Projects = ({ data }) => {
     }
   };
   return (
-    <section id="projects" className="py-24 relative overflow-hidden">
+    <section id="projects" className="relative overflow-hidden">
       {/* Modern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 to-slate-800/30" />
-        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-600/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 right-1/5 w-80 h-80 bg-gradient-to-bl from-emerald-400/6 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-1/5 w-96 h-96 bg-gradient-to-tr from-violet-400/6 to-transparent rounded-full blur-3xl" />
       </div>
       
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="section-header"
           initial={{ y: 30, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-3 mb-4">
-            <Star className="h-8 w-8 text-blue-400" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          <div className="section-title">
+            <Star className="h-8 w-8 text-emerald-400" />
+            <h2 className="text-white font-bold">
               Featured Projects
             </h2>
           </div>
           <motion.div 
-            className="w-16 h-0.5 bg-blue-500 mx-auto mb-6"
+            className="section-divider"
             initial={{ width: 0 }}
-            animate={inView ? { width: 64 } : { width: 0 }}
+            animate={inView ? { width: '4rem' } : { width: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           />
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Key projects showcasing technical expertise and measurable impact
+          <p className="section-description">
+            Key projects from AI platforms to fintech infrastructure, showcasing real-world impact
           </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10">
           {data.filter(project => project.featured).map((project, index) => (
             <motion.div 
               key={project.id}
-              className="relative bg-slate-900/50 border border-slate-800/50 rounded-2xl p-8 backdrop-blur-sm overflow-hidden group cursor-pointer transition-all duration-300 hover:bg-slate-900/70 hover:border-blue-500/30"
+              className="glass-card group cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.3 } }}
+              whileHover={{ y: -8, scale: 1.03, transition: { duration: 0.3 } }}
               onClick={() => project.url && window.open(project.url, '_blank')}
             >  
               {/* Project Header */}
@@ -89,16 +88,16 @@ const Projects = ({ data }) => {
                 animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                 transition={{ delay: index * 0.1 + 0.2, duration: 0.6 }}
               >
-                <h3 className="text-2xl font-bold text-slate-50 mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-slate-300 leading-relaxed mb-4">
+                <p className="text-slate-300 leading-relaxed mb-4 text-sm">
                   {project.description}
                 </p>
                 {project.impact && (
-                  <div className="flex items-start gap-2 p-3 bg-blue-500/10 rounded-xl border border-blue-500/20">
-                    <TrendingUp className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                    <p className="text-blue-300 text-sm">{project.impact}</p>
+                  <div className="flex items-start gap-2 p-3 bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 rounded-xl border border-cyan-400/20 mb-4">
+                    <TrendingUp className="h-4 w-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                    <p className="text-cyan-300 text-sm font-medium">{project.impact}</p>
                   </div>
                 )}
               </motion.div>
@@ -114,7 +113,7 @@ const Projects = ({ data }) => {
                   {project.tech?.map((tech, techIndex) => (
                     <span 
                       key={techIndex} 
-                      className="px-3 py-1.5 bg-slate-800/50 text-slate-300 rounded-lg text-sm border border-slate-700/50"
+                      className="px-3 py-1.5 bg-gradient-to-r from-slate-800/60 to-slate-700/40 text-slate-300 rounded-lg text-xs border border-slate-600/50 backdrop-blur-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -123,15 +122,18 @@ const Projects = ({ data }) => {
               </motion.div>
 
 
-              {/* Click Indicator */}
-              {project.url && (
+              {/* Action Button */}
+              {project.url && project.url !== '#' && (
                 <motion.div 
-                  className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: index * 0.1 + 0.6, duration: 0.4 }}
+                  className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={inView ? { y: 0, opacity: 1 } : { y: 10, opacity: 0 }}
+                  transition={{ delay: index * 0.1 + 0.8, duration: 0.4 }}
                 >
-                  <ExternalLink className="h-5 w-5 text-blue-400" />
+                  <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 hover:from-cyan-500/30 hover:to-indigo-500/30 text-cyan-300 hover:text-white px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-300 border border-cyan-400/30 backdrop-blur-sm shadow-lg hover:shadow-cyan-400/25">
+                    <span>Visit Website</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </button>
                 </motion.div>
               )}
             </motion.div>
